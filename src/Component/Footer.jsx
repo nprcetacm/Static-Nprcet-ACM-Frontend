@@ -12,6 +12,7 @@ import {
   ExternalLink,
   Heart,
   Code,
+  MessageCircle,
   Users,
   Calendar,
   ArrowUp
@@ -32,35 +33,35 @@ const Footer = () => {
 
   const resources = [
     { name: 'ACM Digital Library', href: 'https://dl.acm.org/', external: true },
-    { name: 'Programming Contests', href: '#contests' },
-    { name: 'Workshop Materials', href: '#workshops' },
-    { name: 'Research Papers', href: '#research' },
-    { name: 'Career Guidance', href: '#career' }
+    { name: 'NPRCET Digital Library', href: 'https://idp.nprcet.org',external:true },
+    { name: 'Tech News', href: 'https://technews.acm.org/',external:true },
+    { name: 'Infosys Springboard', href: 'https://infyspringboard.onwingspan.com/web/en/login#iss=https://infyspringboard.onwingspan.com/auth/realms/infyspringboard', external:true },
+    { name: 'TCS iON', href: 'https://www.tcsion.com/',external:true }
   ];
 
   const socialLinks = [
     { 
       name: 'Facebook', 
       icon: <Facebook className="w-5 h-5" />, 
-      href: '#',
+      href: 'https://www.facebook.com/nprinstitutions',
       color: 'hover:text-blue-600'
     },
     { 
-      name: 'Twitter', 
-      icon: <Twitter className="w-5 h-5" />, 
-      href: '#',
-      color: 'hover:text-sky-500'
+      name: 'Whatsapp', 
+      icon: <MessageCircle className="w-5 h-5" />, 
+      href: 'https://whatsapp.com/channel/0029Vaid9cS05MUcZuNT5a13',
+      color: 'hover:text-green-500'
     },
     { 
       name: 'Instagram', 
       icon: <Instagram className="w-5 h-5" />, 
-      href: '#',
+      href: 'https://www.instagram.com/npr_groupofinstitutions_offl',
       color: 'hover:text-pink-600'
     },
     { 
       name: 'LinkedIn', 
       icon: <Linkedin className="w-5 h-5" />, 
-      href: '#',
+      href: 'https://www.linkedin.com/company/npr-group-of-institutions',
       color: 'hover:text-blue-700'
     },
     // { 
@@ -160,6 +161,7 @@ const Footer = () => {
                       href={social.href}
                       className={`p-3 bg-white/10 rounded-full text-gray-300 ${social.color} transition-all duration-200 hover:bg-white/20 hover:scale-110`}
                       aria-label={social.name}
+                      target='blank'
                     >
                       {social.icon}
                     </a>

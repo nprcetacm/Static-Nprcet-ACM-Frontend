@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Linkedin, Github } from 'lucide-react';
 import PriImg from '../Team-Assets/prof-pics/new-princ.png'
 import gopi from '../Team-Assets/prof-photos/Gopisir.jpg'
+import principal from '../Team-Assets/prof-photos/principal.jpg'
+import kalpana from '../Team-Assets/prof-photos/KALPANA C.jpg'
+import ummu from '../Team-Assets/prof-photos/UMMUGULTHUM NATCHIAR S.jpg'
 import img5 from '../Team-Assets/prof-pics/5.png'
 import img4 from '../Team-Assets/prof-pics/4.png'
 import img7 from '../Team-Assets/prof-pics/7.png'
@@ -26,14 +29,35 @@ import stud17 from '../Team-Assets/stud-photos/1st-yr/Vidhya. S.jpg'
 import stud18 from '../Team-Assets/stud-photos/1st-yr/Deepika. M.jpg'
 import stud19 from '../Team-Assets/stud-photos/1st-yr/Abirami. S.jpg'
 import stud20 from '../Team-Assets/stud-photos/1st-yr/Dharshana. G.jpg'
+import stud21 from '../Team-Assets/stud-photos/newmem/I.Iniya Graclin Mary.jpg'
+import stud22 from '../Team-Assets/stud-photos/newmem/Dharani G S.jpg'
+import stud23 from '../Team-Assets/stud-photos/newmem/Janani S.jpg'
+import stud24 from '../Team-Assets/stud-photos/newmem/K Harunya.jpg'
+import stud25 from '../Team-Assets/stud-photos/newmem/Maris Yukeshwaran S.jpg'
+import stud26 from '../Team-Assets/stud-photos/newmem/MOHAMED ABDUL KHADER A.jpg'
+import stud27 from '../Team-Assets/stud-photos/newmem/Nimalan M.jpg'
+import stud28 from '../Team-Assets/stud-photos/newmem/Pravinaida S.jpg'
+import stud29 from '../Team-Assets/stud-photos/newmem/Sangavi K.jpg'
+import stud30 from '../Team-Assets/stud-photos/newmem/SHAHANA S.jpg'
+import stud31 from '../Team-Assets/stud-photos/newmem/Thanushri S.jpg'
+
+
+
+
 
 const Team = () => {
   const particlesRef = useRef(null);
 
   const professionalMembers = [
     {
-      name: "Dr M Karthigai Pandian",
+      name: "Dr S Selvaperumal",
       role: "Faculty Advisor",
+      image: `${principal}`,
+      linkedin: "#"
+    },
+        {
+      name: "Dr M Karthigai Pandian",
+      role: "Research Coordinator",
       image: `${PriImg}`,
       linkedin: "https://www.linkedin.com/in/dr-m-karthigai-pandian-a9321020/"
     },
@@ -50,12 +74,6 @@ const Team = () => {
       linkedin: "#"
     },
     {
-      name: "Dr A Srinivasan",
-      role: "Research Coordinator",
-      image: `${img4}`,
-      linkedin: "#"
-    },
-    {
       name: "Mr V Virumapandi",
       role: "Career Development Advisor(Faculty Sponsor)",
       image: `${img7}`,
@@ -66,7 +84,20 @@ const Team = () => {
       role: "Industry Liaison",
       image: `${img6}`,
       linkedin: "#"
+    },
+        {
+      name: "Ms C Kalpana",
+      role: "Systems & Infrastructure Advisor",
+      image: `${kalpana}`,
+      linkedin: "#"
+    },
+        {
+      name: "Ms S Ummugulthum Natchiar",
+      role: "Data Science & Analytics Advisor",
+      image: `${ummu}`,
+      linkedin: "#"
     }
+
   ];
 
   const students = [
@@ -109,12 +140,12 @@ const Team = () => {
       name: "Mr M Afzal Khan",
       role: "Membership Chair",
       image: `${stud6}`,
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/afzal-khan-m-6413b72a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
       github: "#"
     },
     {
       name: "Mr B S GaneshPriyan",
-      role: "Webmaster",
+      role: "Technology Coordinator",
       image: `${stud7}`,
       linkedin: "#",
       github: "#"
@@ -207,6 +238,83 @@ const Team = () => {
       name: "Ms G Dharsana",
       role: "Social Media Co-lead",
       image: `${stud20}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms I Iniya Graclin Mary",
+      role: "R&D Coordinator",
+      image: `${stud21}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms G S Dharani",
+      role: "Technical Research Support",
+      image: `${stud22}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms S Janani",
+      role: "Hackathon Coordinator",
+      image: `${stud23}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms K Harunya",
+      role: "Coding Event Coordinator",
+      image: `${stud24}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Mr S Maris Yukeshwaran",
+      role: "Technical Support Coordinator",
+      image: `${stud25}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Mr A Mohamed Abdul Khader",
+      role: "Event Volunteer Coordinator",
+      image: `${stud26}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Mr M Nimalan",
+      role: "Tools & Resources Manager",
+      image: `${stud27}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms S Pravinaida",
+      role: "Technical Support Coordinator",
+      image: `${stud28}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms K Sangavi",
+      role: "Technical Support Coordinator",
+      image: `${stud29}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms S Shahana",
+      role: "Technical Support Coordinator",
+      image: `${stud30}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms S Thanushri",
+      role: "Technical Support Coordinator",
+      image: `${stud31}`,
       linkedin: "#",
       github: "#"
     }
