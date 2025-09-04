@@ -10,16 +10,74 @@ import {
   Filter,
   Search,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import evt1 from "../assets/Events/NPRCET-ACM-pongal.jpg"
+import evt2 from "../assets/Events/ieee-banner.jpg"
+import evt3 from "../assets/Events/NPRCET-Inaug-Post.jpg"
+import evt4 from "../assets/Events/peer_learning.jpg"
+import evt5 from "../assets/Events/aashiq.jpg"
+import { useNavigate } from "react-router-dom";
 
-function Events({ data }) {
+
+// Static array of event objects
+const eventsData = [
+  {
+    id: 1,
+    title: "Participation in ACM India Summer School 2025 IoT and Next Generation Network June 16 to June 27, 2025 (12 Days)",
+    description: "IoT and Next Generation Networks exploring future-ready technologies June 16 to June 27, 2025 (12 Days)",
+    date: "2025-06-16",
+    time: "9:00 AM - 5:00 PM",
+    location: "Convention Center, New Delhi",
+    image_url: evt5
+  },
+  {
+    id: 2,
+    title: "Peer Learning session on Bridging Minds:Sustaining Knowledge Exchange",
+    description: "Sustaining Knowledge Exchange fostering collaboration and shared growth",
+    date: "2025-04-22",
+    time: "10:00 AM -12:30 PM",
+    location: "Central Library",
+    image_url: evt4
+  },
+  {
+    id: 3,
+    title: "NPRCET ACM Student Chapter Inauguration Function",
+    description: "Inauguration of the NPRCET ACM Student Chapter marking the beginning of a new journey in computing and innovation",
+    date: "2025-02-03",
+    time: "10:00 AM - 12:00 PM",
+    location: "Thiruvalluvar Hall",
+    image_url:evt3
+  },
+  {
+    id: 4,
+    title: "Webinar on Enhance Your Research with IEEE",
+    description: "An insightful webinar guiding students and researchers on leveraging IEEE resources to enhance the quality and impact of their research",
+    date: "2025-01-22",
+    time: "11:00 AM - 12:00 PM",
+    location: "Bharathiyar Hall",
+    image_url: evt2
+  },
+  {
+    id: 5,
+    title: "NPRCET ACM Student Chapter Pongal Celebration",
+    description: "NPRCET ACM Student Chapter joyfully celebrated Pongal with tradition, unity, and festive spirit",
+    date: "2025-01-11",
+    time: "10:00 AM - 03:00 PM",
+    location: "NPRGI",
+    image_url: evt1
+  },
+];
+
+
+
+function Events() {
+  const navigate=useNavigate()
   const [activeView, setActiveView] = useState("calendar");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
   const [selectedYear, setSelectedYear] = useState("all");
 
-  // Handle the data - it could be an array or object
-  const events = Array.isArray(data) ? data : data ? [data] : [];
+  // Use the static events data
+  const events = eventsData;
   console.log("Events data:", events);
 
   const formatDate = (dateString) => {
@@ -95,21 +153,21 @@ function Events({ data }) {
       <div className="max-w-7xl mx-auto px-6 -mt-10 relative z-10">
         {/* Navigation Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-       {/* Calendar Button (Navigates to /calendar) */}
-      <Link
-        to="/calendar"
-        className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
-          location.pathname === "/calendar"
-            ? "bg-gradient-to-r from-sky-600 to-sky-700 shadow-xl shadow-sky-200"
-            : "bg-gradient-to-r from-sky-500 to-sky-600 hover:shadow-lg shadow-sky-100"
-        }`}
-      >
-        <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-        Explore Events Calendar
-      </Link>
+          {/* Calendar Button */}
+          <button
+            onClick={() => navigate("/calendar")}
+            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
+              activeView === "calendar"
+                ? "bg-gradient-to-r from-sky-600 to-sky-700 shadow-xl shadow-sky-200"
+                : "bg-gradient-to-r from-sky-500 to-sky-600 hover:shadow-lg shadow-sky-100"
+            }`}
+          >
+            <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            Explore Events Calendar
+          </button>
 
-          <Link
-            to={"/gallery"}
+          <button
+            onClick={() => navigate("/gallery")}
             className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
               activeView === "gallery"
                 ? "bg-gradient-to-r from-cyan-600 to-cyan-700 shadow-xl shadow-cyan-200"
@@ -118,7 +176,7 @@ function Events({ data }) {
           >
             <Image className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Explore Gallery
-          </Link>
+          </button>
 
           {/* <button
             onClick={() => handleViewChange("videos")}

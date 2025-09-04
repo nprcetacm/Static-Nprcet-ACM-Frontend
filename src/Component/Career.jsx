@@ -29,7 +29,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_FRONTEND_FORM_ID/viewform",
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",
       color: "from-blue-500 to-purple-600",
     },
     {
@@ -58,7 +58,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_BACKEND_FORM_ID/viewform",
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",
       color: "from-green-500 to-teal-600",
     },
     {
@@ -86,7 +86,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_FULLSTACK_FORM_ID/viewform",
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",
       color: "from-purple-500 to-pink-600",
     },
     {
@@ -113,7 +113,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_VIDEO_EDITOR_FORM_ID/viewform",
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",
       color: "from-red-500 to-orange-600",
     },
     {
@@ -143,7 +143,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_DESIGNER_FORM_ID/viewform",
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",
       color: "from-indigo-500 to-blue-600",
     },
     {
@@ -173,7 +173,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_SOCIAL_MEDIA_FORM_ID/viewform", // Replace with actual form URL
+        "https://forms.gle/T5v7GHq8aaTK4fLA7",  
       color: "from-pink-500 to-rose-600",
     },
     {
@@ -202,7 +202,7 @@ function Career() {
           />
         </svg>
       ),
-      formUrl: "https://docs.google.com/forms/d/e/YOUR_EVENTS_FORM_ID/viewform", // Replace with actual form URL
+      formUrl: "https://forms.gle/T5v7GHq8aaTK4fLA7", 
       color: "from-yellow-500 to-amber-600",
     },
     {
@@ -232,7 +232,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_TECH_DEPUTY_FORM_ID/viewform", // Replace with actual form URL
+        "https://forms.gle/T5v7GHq8aaTK4fLA7", 
       color: "from-emerald-500 to-green-600",
     },
     {
@@ -262,7 +262,7 @@ function Career() {
         </svg>
       ),
       formUrl:
-        "https://docs.google.com/forms/d/e/YOUR_SOCIAL_COLEAD_FORM_ID/viewform", // Replace with actual form URL
+        " https://forms.gle/T5v7GHq8aaTK4fLA7",  
       color: "from-violet-500 to-purple-600",
     },
   ];
@@ -442,8 +442,9 @@ function Career() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a
-              href="nprcetacm@nprcolleges.org" // Replace with actual email
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=nprcetacm@nprcolleges.org"  
               className="bg-white text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center space-x-2"
+              target="blank"
             >
               <svg
                 className="w-5 h-5"
@@ -461,7 +462,7 @@ function Career() {
               <span>Contact Us</span>
             </a>
             <a
-              href="https://docs.google.com/forms/d/e/YOUR_GENERAL_INQUIRY_FORM_ID/viewform" // Replace with actual form URL
+              href="https://forms.gle/T5v7GHq8aaTK4fLA7"  
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-gray-800 transition-colors inline-flex items-center justify-center space-x-2"

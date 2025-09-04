@@ -1,287 +1,594 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, MapPin, Clock, Users, ChevronRight, Filter, Search } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  Calendar,
+  MapPin,
+  Clock,
+  Users,
+  ChevronRight,
+  Filter,
+  Search,
+  Code,
+  Handshake,
+  BookOpen,
+  Monitor,
+  Cpu,
+  Database,
+  Laptop,
+  GraduationCap,
+  Globe,
+  Award,
+  Zap,
+  Brain,
+  Wifi,
+} from "lucide-react";
+import outreach1 from '../assets/Outreach/outreach1.jpg'
+import outreach2 from '../assets/Outreach/aashiqoutreach2.jpg'
 
-function OutreachNew({ data = [] }) {
+
+
+// Static outreach activities
+const outreachData = [
+  {
+    id: 1,
+    title: "Digital Library & Career Guidance",
+    description:
+      "Empowering students after 12th with access to e-books, entrance exam updates, and expert career advice for higher studies.",
+    date: "2025-08-10",
+    location: "NPR Group of Institutions – Online & Campus",
+    status: "ongoing",
+    image_url: outreach1,
+    heading1: "Library Access",
+    description1:
+      "Comprehensive digital library with e-books, journals, research papers, and study materials to support higher education and entrance exam preparation.",
+    heading2: "Career Guidance",
+    description2:
+      "Expert sessions and mentorship programs offering guidance for competitive exams, higher studies, and career opportunities after 12th standard.",
+    heading3: "Student Benefits",
+    description3:
+      "24/7 online access to resources, QR code-based quick entry, updates on scholarships, and personalized counseling to shape students’ academic futures. Explore: https://xmind.ai/embed/YPMwfeJN",
+    // external_link: "https://xmind.ai/embed/YPMwfeJN",
+  },
+  {
+    id: 2,
+    title: "International Collaboration - ACM Student Chapter",
+    description:
+      "Strengthening ACM communities through global academic collaboration. NPRCET ACM Student Chapter connected with BITS Pilani Dubai Campus.",
+    date: "2025-04-04",
+    location: "BITS Pilani, Dubai Campus",
+    status: "completed",
+    image_url: outreach2,
+    heading1: "Representation",
+    description1:
+      "Mr. S. Aashiq Rasool (CSE II Year) represented NPRCET ACM Student Chapter in an international academic exchange at BITS Pilani Dubai Campus.",
+    heading2: "Objectives",
+    description2:
+      "To explore collaboration opportunities, strengthen ACM student communities, and exchange knowledge on global technology trends.",
+    heading3: "Impact",
+    description3:
+      "Enhanced visibility of NPRCET ACM Student Chapter, future joint events planned, and strong academic ties established with international institutions.",
+  },
+];
+
+
+function OutreachNew() {
   const [filteredData, setFilteredData] = useState([]);
-  const [selectedStatus, setSelectedStatus] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedStatus, setSelectedStatus] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedOutreach, setSelectedOutreach] = useState(null);
 
-  // Filter data based on status and search
+  // Filtering
   useEffect(() => {
-    let filtered = data;
-    
-    if (selectedStatus !== 'all') {
-      filtered = filtered.filter(item => item.status === selectedStatus);
+    let filtered = outreachData;
+
+    if (selectedStatus !== "all") {
+      filtered = filtered.filter((item) => item.status === selectedStatus);
     }
-    
+
     if (searchTerm) {
-      filtered = filtered.filter(item =>
-        item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.location?.toLowerCase().includes(searchTerm.toLowerCase())
+      filtered = filtered.filter(
+        (item) =>
+          item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.location?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-    
+
     setFilteredData(filtered);
-  }, [data, selectedStatus, searchTerm]);
+  }, [selectedStatus, searchTerm]);
 
   const formatDate = (dateString) => {
-    if (!dateString) return 'Date TBD';
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    if (!dateString) return "Date TBD";
+    const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'upcoming':
-        return 'bg-blue-50 text-blue-700 border border-blue-200';
-      case 'ongoing':
-        return 'bg-green-50 text-green-700 border border-green-200';
-      case 'completed':
-        return 'bg-gray-50 text-gray-700 border border-gray-200';
+      case "upcoming":
+        return "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border border-blue-200 shadow-sm";
+      case "ongoing":
+        return "bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 border border-green-200 shadow-sm";
+      case "completed":
+        return "bg-gradient-to-r from-purple-50 to-violet-50 text-purple-700 border border-purple-200 shadow-sm";
       default:
-        return 'bg-gray-50 text-gray-700 border border-gray-200';
+        return "bg-gradient-to-r from-gray-50 to-slate-50 text-gray-700 border border-gray-200 shadow-sm";
     }
   };
 
   const getStatusIcon = (status) => {
     switch (status) {
-      case 'upcoming':
+      case "upcoming":
         return <Clock className="h-4 w-4" />;
-      case 'ongoing':
-        return <Users className="h-4 w-4" />;
-      case 'completed':
-        return <Calendar className="h-4 w-4" />;
+      case "ongoing":
+        return <Zap className="h-4 w-4" />;
+      case "completed":
+        return <Award className="h-4 w-4" />;
       default:
         return <Clock className="h-4 w-4" />;
     }
   };
 
-  // Handle case when no data is provided
-  if (!data || data.length === 0) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center bg-white p-12 rounded-xl shadow-sm border">
-          <div className="text-gray-300 mb-6">
-            <Users className="h-20 w-20 mx-auto" />
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">No Outreach Activities</h3>
-          <p className="text-gray-600">No outreach activities are currently available.</p>
-        </div>
-      </div>
-    );
-  }
+  const getActivityIcon = (title) => {
+    const titleLower = title?.toLowerCase() || "";
+    if (titleLower.includes("code") || titleLower.includes("programming"))
+      return <Code className="h-6 w-6" />;
+    if (titleLower.includes("digital") || titleLower.includes("computer"))
+      return <Monitor className="h-6 w-6" />;
+    if (
+      titleLower.includes("ai") ||
+      titleLower.includes("machine learning") ||
+      titleLower.includes("artificial")
+    )
+      return <Brain className="h-6 w-6" />;
+    if (titleLower.includes("database") || titleLower.includes("data"))
+      return <Database className="h-6 w-6" />;
+    if (titleLower.includes("network") || titleLower.includes("internet"))
+      return <Wifi className="h-6 w-6" />;
+    if (titleLower.includes("tech") || titleLower.includes("technology"))
+      return <Cpu className="h-6 w-6" />;
+    return <Laptop className="h-6 w-6" />;
+  };
 
   return (
-    <div className="min-h-screen mt-20 bg-gray-50">
-      {/* Header Section */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-sky-600 mb-4">Our Outreach Activities</h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover our community initiatives and join us in making a positive impact in society
+    <div className="min-h-screen mt-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      {/* Header */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-16 h-16 border-2 border-white/20 rounded-lg rotate-45 animate-pulse"></div>
+          <div
+            className="absolute top-40 right-20 w-12 h-12 bg-white/10 rounded-full animate-bounce"
+            style={{ animationDelay: "1s", animationDuration: "4s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 left-1/4 w-8 h-8 border border-white/20 animate-spin"
+            style={{ animationDelay: "2s", animationDuration: "8s" }}
+          ></div>
+          <Code
+            className="absolute top-32 right-1/4 h-8 w-8 text-white/20 animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          />
+          <Monitor
+            className="absolute bottom-32 right-16 h-6 w-6 text-white/20 animate-bounce"
+            style={{ animationDelay: "1.5s" }}
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 py-16">
+          <div className="text-center">
+            <div className="mb-6 flex justify-center">
+              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                <Code className="h-16 w-16 text-white animate-pulse" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              ACM OUTREACH ACTIVITIES
+            </h1>
+            <p className="text-xl md:text-2xl font-light opacity-90 max-w-4xl mx-auto leading-relaxed">
+              Bridging the digital divide through computing education and
+              technology awareness initiatives
             </p>
           </div>
+        </div>
 
-          {/* Search and Filter Bar */}
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between max-w-4xl mx-auto">
+        {/* ✅ Fixed Grid Background */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-50 to-transparent"></div>
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        ></div>
+      </div>
+
+      {/* Rest of your component (search, grid, modal, stats, etc.) remains unchanged */}
+      {/* ... same code as before ... */}
+            {/* Enhanced Search and Filter Section */}
+      <div className="max-w-7xl mx-auto px-6 -mt-10 relative z-10">
+        <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-blue-100 p-8 mb-12">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-500 h-5 w-5" />
               <input
                 type="text"
-                placeholder="Search activities..."
+                placeholder="Search tech initiatives..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                className="w-full pl-12 pr-4 py-4 border-2 border-blue-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md"
               />
             </div>
-            
-            <div className="flex items-center gap-3">
-              <Filter className="h-5 w-5 text-gray-500" />
-              <select
-                value={selectedStatus}
-                onChange={(e) => setSelectedStatus(e.target.value)}
-                className="border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white min-w-[140px]"
-              >
-                <option value="all">All Status</option>
-                <option value="upcoming">Upcoming</option>
-                <option value="ongoing">Ongoing</option>
-                <option value="completed">Completed</option>
-              </select>
+
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
+                <Filter className="h-5 w-5 text-blue-600" />
+                <select
+                  value={selectedStatus}
+                  onChange={(e) => setSelectedStatus(e.target.value)}
+                  className="border-2 border-blue-200 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white min-w-[160px] shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <option value="all">All Status</option>
+                  <option value="upcoming">Upcoming</option>
+                  <option value="ongoing">Ongoing</option>
+                  <option value="completed">Completed</option>
+                </select>
+              </div>
             </div>
           </div>
 
           {/* Results Count */}
           <div className="mt-6 text-center">
-            <p className="text-sm text-gray-500">
-              Showing {filteredData.length} of {data.length} activities
-            </p>
+            <div className="flex items-center justify-center gap-2 text-blue-700">
+              <Globe className="h-4 w-4 text-blue-600" />
+              <span className="text-sm font-medium">
+                Showing {filteredData.length} of {outreachData.length} tech initiatives
+              </span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Activities Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
+        {/* Activities Grid */}
         {filteredData.length === 0 ? (
           <div className="text-center py-20">
-            <div className="text-gray-300 mb-6">
-              <Search className="h-20 w-20 mx-auto" />
+            <div className="bg-white rounded-3xl shadow-xl p-12 max-w-md mx-auto border border-blue-100">
+              <div className="text-blue-300 mb-6">
+                <Search className="h-20 w-20 mx-auto" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-700 mb-4">
+                No Tech Initiatives Found
+              </h3>
+              <p className="text-gray-500 mb-6">
+                {searchTerm || selectedStatus !== "all"
+                  ? "Try adjusting your search or filter criteria."
+                  : "No outreach activities match your criteria."}
+              </p>
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm("")}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-2xl hover:bg-blue-700 transition-colors mr-2"
+                >
+                  Clear Search
+                </button>
+              )}
+              {selectedStatus !== "all" && (
+                <button
+                  onClick={() => setSelectedStatus("all")}
+                  className="bg-indigo-600 text-white px-6 py-3 rounded-2xl hover:bg-indigo-700 transition-colors"
+                >
+                  Clear Filter
+                </button>
+              )}
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">No Activities Found</h3>
-            <p className="text-gray-600">
-              {searchTerm || selectedStatus !== 'all' 
-                ? 'Try adjusting your search or filter criteria.'
-                : 'No outreach activities match your criteria.'}
-            </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredData.map((activity) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {filteredData.map((activity, index) => (
               <div
                 key={activity.id}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md hover:border-gray-200 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                className="group bg-white rounded-3xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-2xl hover:border-blue-300 transition-all duration-500 hover:transform hover:scale-105 cursor-pointer"
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  animation: 'fadeInUp 0.8s ease-out forwards'
+                }}
                 onClick={() => setSelectedOutreach(activity)}
               >
-                {/* Image */}
-                <div className="relative h-70 bg-gray-100">
+                {/* Image Section */}
+                <div className="relative h-64 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 overflow-hidden">
                   {activity.image_url ? (
                     <img
                       src={activity.image_url}
-                      alt={activity.title || 'Outreach Activity'}
-                      className="w-full h-full object-cover"
+                      alt={activity.title || "Tech Outreach Activity"}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
+                        e.target.style.display = "none";
+                        e.target.nextSibling.style.display = "flex";
                       }}
                     />
                   ) : null}
-                  
-                  {/* Fallback when image fails or doesn't exist */}
-                  <div className={`w-full h-full flex items-center justify-center ${activity.image_url ? 'hidden' : 'flex'}`}>
-                    <Users className="h-16 w-16 text-gray-300" />
+
+                  {/* Tech Fallback */}
+                  <div
+                    className={`w-full h-full flex items-center justify-center text-white ${
+                      activity.image_url ? "hidden" : "flex"
+                    }`}
+                  >
+                    <div className="text-center">
+                      {getActivityIcon(activity.title)}
+                      <p className="text-sm font-medium mt-2">Tech Initiative</p>
+                    </div>
                   </div>
-                  
+
                   {/* Status Badge */}
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-lg text-sm font-medium flex items-center gap-1 ${getStatusColor(activity.status)}`}>
+                  <div
+                    className={`absolute top-4 right-4 px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 backdrop-blur-sm ${getStatusColor(
+                      activity.status
+                    )}`}
+                  >
                     {getStatusIcon(activity.status)}
-                    <span className="capitalize">{activity.status || 'upcoming'}</span>
+                    <span className="capitalize">
+                      {activity.status || "upcoming"}
+                    </span>
                   </div>
+
+                  {/* Activity Type Icon */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 text-blue-600 shadow-lg">
+                    {getActivityIcon(activity.title)}
+                  </div>
+
+                  {/* Tech Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {activity.title || 'Untitled Activity'}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
+                    {activity.title || "Untitled Initiative"}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
-                    {activity.description || 'No description available'}
+                  <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed text-sm">
+                    {activity.description || "No description available"}
                   </p>
-                  
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <Calendar className="h-4 w-4 mr-3 text-blue-500" />
-                    <span>{formatDate(activity.date)}</span>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center text-sm text-gray-500">
+                      <Calendar className="h-4 w-4 mr-3 text-blue-500 flex-shrink-0" />
+                      <span className="font-medium">{formatDate(activity.date)}</span>
+                    </div>
+
+                    <div className="flex items-center text-sm text-gray-500">
+                      <MapPin className="h-4 w-4 mr-3 text-indigo-500 flex-shrink-0" />
+                      <span className="line-clamp-1 font-medium">{activity.location || "Location TBD"}</span>
+                    </div>
                   </div>
-                  
-                  <div className="flex items-center text-sm text-gray-500 mb-6">
-                    <MapPin className="h-4 w-4 mr-3 text-red-500" />
-                    <span>{activity.location || 'Location TBD'}</span>
-                  </div>
-                  
-                  <button className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium">
-                    View Details
-                    <ChevronRight className="h-4 w-4" />
+
+                  <button className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-semibold py-3 px-4 rounded-2xl hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center gap-2">
+                    <Code className="h-4 w-4" />
+                    <span >Read More </span>
+                    <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </button>
+
+
                 </div>
               </div>
             ))}
           </div>
         )}
+
+        {/* Tech Stats Section */}
+        {outreachData.length > 0 && (
+          <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-8 text-white text-center mb-12 shadow-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold mb-2">{outreachData.length}</div>
+                <div className="text-blue-100 flex items-center justify-center gap-2">
+                  <Laptop className="h-4 w-4" />
+                  Tech Initiatives
+                </div>
+              </div>
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold mb-2">
+                  {outreachData.filter((e) => e.status === "upcoming").length}
+                </div>
+                <div className="text-indigo-100 flex items-center justify-center gap-2">
+                  <Clock className="h-4 w-4" />
+                  Upcoming
+                </div>
+              </div>
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold mb-2">
+                  {outreachData.filter((e) => e.status === "ongoing").length}
+                </div>
+                <div className="text-purple-100 flex items-center justify-center gap-2">
+                  <Zap className="h-4 w-4" />
+                  Active
+                </div>
+              </div>
+              <div className="transform hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl font-bold mb-2">
+                  {filteredData.length}
+                </div>
+                <div className="text-cyan-100 flex items-center justify-center gap-2">
+                  <Award className="h-4 w-4" />
+                  Displayed
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* Detail Modal */}
+      {/* Enhanced Detail Modal */}
       {selectedOutreach && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl">
-            <div className="sticky top-0 bg-white border-b border-gray-100 px-8 py-6 flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-gray-900">
-                {selectedOutreach.title || 'Activity Details'}
-              </h2>
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-blue-200 animate-modal-appear">
+            <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-6 flex items-center justify-between rounded-t-3xl">
+              <div className="flex items-center gap-4">
+                <div className="bg-white/20 backdrop-blur-sm rounded-xl p-2 border border-white/20">
+                  {getActivityIcon(selectedOutreach.title)}
+                </div>
+                <h2 className="text-2xl font-bold">
+                  {selectedOutreach.title || "Tech Initiative Details"}
+                </h2>
+              </div>
               <button
                 onClick={() => setSelectedOutreach(null)}
-                className="text-gray-400 hover:text-gray-600 text-3xl font-light"
+                className="text-white hover:text-blue-200 text-3xl font-light bg-white/20 rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/30 transition-all"
               >
                 ×
               </button>
             </div>
-            
+
             <div className="p-8">
               {/* Image */}
               {selectedOutreach.image_url && (
-                <img
-                  src={selectedOutreach.image_url}
-                  alt={selectedOutreach.title}
-                  className="w-full object-cover rounded-xl mb-8"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                  }}
-                />
+                <div className="relative mb-8 rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={selectedOutreach.image_url}
+                    alt={selectedOutreach.title}
+                    className="w-full h-64 object-cover"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"></div>
+                </div>
               )}
-              
+
               {/* Basic Info */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 ${getStatusColor(selectedOutreach.status)}`}>
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                <div
+                  className={`px-6 py-3 rounded-xl text-sm font-semibold flex items-center gap-3 ${getStatusColor(
+                    selectedOutreach.status
+                  )}`}
+                >
                   {getStatusIcon(selectedOutreach.status)}
-                  <span className="capitalize">{selectedOutreach.status || 'upcoming'}</span>
+                  <span className="capitalize">
+                    {selectedOutreach.status || "upcoming"}
+                  </span>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-center text-gray-600">
-                  <Calendar className="h-5 w-5 mr-3 text-blue-500" />
-                  <span className="font-medium">{formatDate(selectedOutreach.date)}</span>
+                <div className="flex items-center text-gray-700 bg-blue-50 rounded-xl p-4">
+                  <Calendar className="h-6 w-6 mr-4 text-blue-600" />
+                  <div>
+                    <div className="text-sm text-gray-500">Date</div>
+                    <span className="font-semibold text-lg">
+                      {formatDate(selectedOutreach.date)}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center text-gray-600">
-                  <MapPin className="h-5 w-5 mr-3 text-red-500" />
-                  <span className="font-medium">{selectedOutreach.location || 'Location TBD'}</span>
+                <div className="flex items-center text-gray-700 bg-indigo-50 rounded-xl p-4">
+                  <MapPin className="h-6 w-6 mr-4 text-indigo-600" />
+                  <div>
+                    <div className="text-sm text-gray-500">Location</div>
+                    <span className="font-semibold text-lg">
+                      {selectedOutreach.location || "Location TBD"}
+                    </span>
+                  </div>
                 </div>
               </div>
-              
-              <div className="mb-10">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Description</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {selectedOutreach.description || 'No description available'}
+
+              <div className="mb-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-blue-600" />
+                  About This Tech Initiative
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                  {selectedOutreach.description || "No description available"}
                 </p>
               </div>
-              
+
               {/* Dynamic Sections */}
               <div className="space-y-8">
                 {[1, 2, 3].map((num) => {
                   const heading = selectedOutreach[`heading${num}`];
                   const description = selectedOutreach[`description${num}`];
-                  
+
                   if (!heading || !description) return null;
-                  
+
                   return (
-                    <div key={num} className="border-l-4 border-blue-500 pl-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">{heading}</h3>
-                      <p className="text-gray-700 leading-relaxed">{description}</p>
+                    <div
+                      key={num}
+                      className="bg-white border-2 border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full p-2 flex-shrink-0 mt-1">
+                          <Code className="h-4 w-4" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-3">
+                            {heading}
+                          </h3>
+                          <p className="text-gray-700 leading-relaxed">
+                            {description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   );
                 })}
               </div>
 
-              {/* No additional sections message */}
-              {![1, 2, 3].some(num => selectedOutreach[`heading${num}`] && selectedOutreach[`description${num}`]) && (
-                <div className="text-center py-12 border-t border-gray-100 mt-8">
-                  <p className="text-gray-500">No additional details available for this activity.</p>
-                </div>
-              )}
+              {/* Action Button */}
+              <div className="mt-8 text-center">
+                <button
+                  onClick={() => setSelectedOutreach(null)}
+                  className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold py-4 px-8 rounded-2xl hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3 mx-auto"
+                >
+                  <Code className="h-5 w-5" />
+                <a href="https://xmind.ai/embed/YPMwfeJN" target="blank">Explore Now</a>
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes modal-appear {
+          from {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+        .animate-modal-appear {
+          animation: modal-appear 0.3s ease-out;
+        }
+        .line-clamp-3 {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </div>
   );
 }
