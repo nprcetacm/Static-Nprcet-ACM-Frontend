@@ -2,14 +2,23 @@ import React from 'react';
 import { Calendar, MapPin, Clock, ImageOff, Sparkles } from 'lucide-react';
 import new1 from '../assets/RecentEvt/new1.png'
 import new2 from '../assets/RecentEvt/aashiq2.jpg'
-import new3 from '../assets/RecentEvt/peer_learning3.jpg'
-
+import new4 from '../assets/RecentEvt/lunar.jpg'
 
 function Recentevents() {
   // Static array of events
   const events = [
-  {
+      {
     id: 1,
+    title: "Awareness Session on the Upcoming Total Lunar Eclipse",
+    description:
+      "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
+    date: "2025-09-06",
+    time: "18:00-19:00",
+    location: "Google Meet (Online)",
+    image_url: new4,
+  },
+  {
+    id: 2,
     title: "Knowledge Sharing Session on IoT and Next Generation Networks",
     description:
       "Mr. Aashiq Rasool S delivered a technical presentation to ACM members on IoT and Next Generation Networks.",
@@ -19,7 +28,7 @@ function Recentevents() {
     image_url: new1,
   },
   {
-    id: 2,
+    id: 3,
     title: "ACM India Summer School 2025 - IoT and Next Generation Networks",
     description:
       "Participation in ACM India Summer School 2025, a 12-day program focused on IoT and Next Generation Networks.",
@@ -27,16 +36,6 @@ function Recentevents() {
     time: null,
     location: "Kalasalingam Academy of Research and Education (KARE)",
     image_url: new2,
-  },
-  {
-    id: 3,
-    title: "Peer Learning Session - Bridging Minds: Sustaining Knowledge Exchange",
-    description:
-      "A peer learning session dedicated to fostering collaborative knowledge exchange among students.",
-    date: "2025-04-22",
-    time: "10:00",
-    location: "NPRCET Seminar Hall",
-    image_url: new3,
   },
   ];
 

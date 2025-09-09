@@ -27,6 +27,10 @@ import know2 from '../assets/Gallery/Knowledgesharing/know2.png';
 import peer1 from '../assets/Gallery/Peerlearning/Peer1.jpg';
 import peer2 from '../assets/Gallery/Peerlearning/Peer2.jpg';
 
+import lunar1 from '../assets/Gallery/lunar/lunar.jpg'
+import lunar2 from '../assets/Gallery/lunar/lunar2.jpg'
+
+
 
 
 
@@ -38,6 +42,19 @@ import peer2 from '../assets/Gallery/Peerlearning/Peer2.jpg';
 const staticGalleryItems = [
   {
     id: 1,
+    title: "Awareness Session on the Upcoming Total Lunar Eclipse",
+    caption: "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
+    image_url1: lunar1,
+    image_url3: lunar2,
+    heading1: "Key Highlights",
+    description1: "Dr. Chrisphin Karthick delivered an engaging scientific session, providing a clear understanding of the core mechanics of a lunar eclipse. He explained how the precise alignment of the Sun, Earth, and Moon causes the Earth to cast its shadow—composed of the darker umbra and lighter penumbra—onto the Moon. The session covered the classification of eclipses: total, partial, and penumbral, and introduced the role of orbital nodes, explaining why eclipses don’t happen every full moon. A key highlight was the explanation of the Blood Moon phenomenon, where Earth's atmosphere refracts sunlight, scattering blue light and allowing red light to illuminate the Moon. Dr. Karthick also emphasized that lunar eclipses are safe to observe with the naked eye, binoculars, or telescopes, unlike solar eclipses. The session concluded by debunking myths and superstitions, promoting a science-based understanding and inspiring curiosity.",
+    heading2: "Objective",
+    description2: "The session aimed to disseminate accurate scientific knowledge about total lunar eclipses, educating participants on safe observation methods and debunking common myths. It sought to foster scientific inquiry and astronomical enthusiasm by encouraging students to embrace empirical science, explore natural phenomena rationally, and view astronomical events as opportunities for learning rather than fear.",
+    heading3: "Organizing Bodies & Outcome",
+    description3 : "This event was jointly organized by the NPRCET ACM Student Chapter and the Tamil Nadu Astronomy & Science Society (TASS), combining organizational strength and scientific expertise. The session successfully inspired students to participate in ACM initiatives, pursue deeper learning through SIGs, and engage in safe astronomical observations. It strengthened peer learning, promoted scientific dialogue between students and experts, and advanced STEM education by bridging academia and public awareness."
+  },
+{
+    id: 2,
     title: "Knowledge Sharing Session on IoT and Next Generation Networks",
     caption: "Mr. Aashiq Rasool S, Vice President – NPRCET ACM Student Chapter, delivered a technical presentation to ACM members.",
     image_url1: know1,
@@ -50,7 +67,7 @@ const staticGalleryItems = [
     description3: "The session significantly expanded participants’ technical knowledge by providing exposure to cutting-edge networking and IoT technologies. It motivated students to explore real-world applications and pursue further research directions in these fields. Additionally, the event strengthened collaboration between NPRCET ACM and TCE ACM chapters, fostering a culture of peer learning, knowledge sharing, and mutual academic growth. Many students were also encouraged to engage in future ACM India events, Summer/Winter Schools, and SIG activities."
   },
   {
-    id: 2,
+    id: 3,
     title: "Peer Learning Session on Bridging Minds",
     caption: "Dr. P. Nagaraj, Associate Professor School of Computing SRMIST, delivered an inspiring session on ACM and computing opportunities.",
     image_url1: peer1,
@@ -63,7 +80,7 @@ const staticGalleryItems = [
     description3: "The session successfully inspired students to actively engage in ACM initiatives and explore deeper learning avenues by contributing to SIGs and leveraging global networking opportunities. It instilled a sense of responsibility and motivation among students to be part of the global computing community and contribute to technological innovations through collaboration, research, and knowledge sharing."
   },
   {
-    id: 3,
+    id: 4,
     title: "Successful International Collaboration",
     caption: "Collaboration meeting between NPRCET ACM and BITS Pilani Dubai ACM Student Chapters.",
     image_url1: intercollab1,
@@ -76,7 +93,7 @@ const staticGalleryItems = [
     description3: "The main objectives of this collaboration are to enhance students’ technical skills, foster a culture of innovation, and strengthen the global ACM community network. By working together on shared initiatives, the chapters aim to provide students with greater exposure to industry trends, technical challenges, and global best practices, further empowering them as future technology leaders."
   },
   {
-    id: 4,
+    id: 5,
     title: "ACM India Industry Day 2025",
     caption: "NPRCET ACM Student Chapter showcased innovation at ACM India Industry Day and was honored to meet Dr. Ponnurangam Kumaraguru, Vice President of ACM India, during the event.",
     image_url1: industry1 ,
@@ -89,7 +106,7 @@ const staticGalleryItems = [
     description3: "The event promoted active engagement through several interactive sessions. Students showcased their innovative projects and research ideas during poster presentations, demonstrating real-world applications of computing concepts. In addition, Ask Me Anything (AMA) sessions created an open and engaging environment where industry experts answered participant questions, fostering meaningful knowledge exchange. The event also provided opportunities for students to network directly with industry professionals, strengthening academic-industry connections."
   },
   {
-    id: 5,
+    id: 6,
     title: "ACM Annual Event 2025",
     caption: "NPRCET ACM Student Chapter participated in ACM India Annual Event at PSG College of Tech.",
     image_url1:annual3,
@@ -103,7 +120,7 @@ const staticGalleryItems = [
     description3: "Our participation in the ACM India Annual Event 2025 offered an incredible opportunity for networking, learning, and engaging with global leaders in computing. We were honored to meet Prof. Yannis Ioannidis, President of ACM, and enjoyed a memorable interaction with Prof. Dame Wendy Hall and Dr. Meenakshi D’Souza, Director – Research and Development. Furthermore, the event strengthened our collaborative ties, including meaningful discussions with the VIT ACM Student Chapter. Overall, the event reinforced our commitment to excellence, innovation, and contribution in the field of computing."
   },
   {
-    id: 6,
+    id: 7,
     title: "NPRCET ACM Inauguration Function",
     caption: "Inaugural ceremony with Chief Guest Dr. Meenakshi D’Souza, President of the ACM India Council, Professor & HOD-CSE at IIIT-Bangalore.",
     image_url1: inaug3,
@@ -117,7 +134,7 @@ const staticGalleryItems = [
     description3: "The event successfully motivated students to actively join and contribute to the NPRCET ACM chapter. It deepened their understanding of how ACM functions as a bridge between academic knowledge and industry needs. The interaction with Dr. Meenakshi D’Souza and other speakers inspired students to explore technical opportunities, participate in research activities, and leverage ACM membership to build a strong foundation for their careers."
   },
   {
-    id: 7,
+    id: 8,
     title: "IEEE Xplore Digital Library Training",
     caption: "Webinar on 'Enhance Your Research with IEEE' by Mr. T. S. Nanda Lal Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.",
     image_url1:ieee1,
@@ -131,7 +148,7 @@ const staticGalleryItems = [
     description3: "By the end of the training, participants achieved improved research skills and developed an enhanced understanding of IEEE Xplore Digital Library resources. They learned to efficiently search, retrieve, and manage research papers, export useful content, and document their references. The session boosted awareness of IEEE’s powerful tools and resources, enabling students and researchers to stay updated with the latest advancements, track technology trends, and publish their work effectively. The session concluded with a review and an online quiz to reinforce the key concepts."
   },
   {
-    id: 8,
+    id: 9,
     title: "NPRCET ACM Orientation Session",
     caption: "Series of sessions introducing ACM activities and opportunities to students.",
     image_url1: ori1,

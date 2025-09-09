@@ -15,8 +15,8 @@ const Testimonial = () => {
     },
     {
       id: 2,
-      name: "Prof. Michael Chen",
-      designation: "Dr. Meenakshi D'Souza, President of the ACM India Council,Professor, Head of the Department of Computer Science and Engineering (CSE) IIIT-Bangalore",
+      name: "Dr. Meenakshi D'Souza",
+      designation: " President of the ACM India Council,Professor, Head of the Department of Computer Science and Engineering (CSE) IIIT-Bangalore",
       image: meenakshi,
       content: "Very impressed by the excellent initiatives being undertaken by NPRCET, best use of the autonomy status of the college. Thank you for inviting me. All the best on behalf of ACM India too!",
       rating: 5
