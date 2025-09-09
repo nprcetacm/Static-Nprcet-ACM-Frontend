@@ -294,7 +294,7 @@ function OutreachNew() {
                 onClick={() => setSelectedOutreach(activity)}
               >
                 {/* Image Section */}
-                <div className="relative h-64 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 overflow-hidden">
+                <div className="relative  bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 overflow-hidden">
                   {activity.image_url ? (
                     <img
                       src={activity.image_url}
@@ -445,7 +445,7 @@ function OutreachNew() {
                   <img
                     src={selectedOutreach.image_url}
                     alt={selectedOutreach.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-full object-cover"
                     onError={(e) => {
                       e.target.style.display = "none";
                     }}

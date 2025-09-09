@@ -7,6 +7,7 @@ import VsMisGo from '../Component/VsMisGo'
 import Sponsors from '../Component/Sponsors'
 import Contactsec from '../Component/Contactsec'
 import Footer from '../Component/Footer'
+import Testi from '../Component/Testi'
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
     <AboutNprcet/>
     <AboutAcm/>
     <VsMisGo/>
+    <Testi/>
     <Sponsors/>
     <Contactsec/>
     <Footer/>

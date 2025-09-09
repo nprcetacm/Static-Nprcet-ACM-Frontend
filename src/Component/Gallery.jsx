@@ -39,28 +39,28 @@ const staticGalleryItems = [
   {
     id: 1,
     title: "Knowledge Sharing Session on IoT and Next Generation Networks",
-    caption: "Mr. Aashiq Rasool S delivered a technical presentation to ACM members.",
+    caption: "Mr. Aashiq Rasool S, Vice President – NPRCET ACM Student Chapter, delivered a technical presentation to ACM members.",
     image_url1: know1,
     image_url3: know2,
     heading1: "Key Highlights",
-    description1: "Covered IoT architecture, 5G, Cloud/Fog/Edge computing, SDN, AI integration.",
+    description1:"The session covered several advanced topics, beginning with the fundamentals of Internet of Things (IoT), including its architecture, protocols, and the challenges faced in large-scale deployments. Mr. Aashiq elaborated on 5G and Machine-to-Machine Communication, discussing how these technologies enable real-time connectivity and automation in smart applications. The role of Cloud, Fog, and Edge Computing in IoT ecosystems was explained, highlighting how distributed computing brings computational power closer to data sources for faster response times. The session further explored Software-Defined Networking (SDN/NFV) as a means to simplify and virtualize network management, along with the integration of Artificial Intelligence (AI) and Generative AI into IoT solutions to enable intelligent decision-making and automation.",
     heading2: "Participation",
-    description2: "33 members from NPRCET & TCE IT ACM Student Chapters attended.",
+    description2: "A total of 33 members from NPRCET ACM and TCE IT ACM Student Chapters actively participated in the session. The interactive format enabled meaningful exchanges, allowing attendees to discuss real-world applications and research trends in the IoT and networking domain.",
     heading3: "Outcome",
-    description3: "Expanded technical knowledge and strengthened peer learning between chapters."
+    description3: "The session significantly expanded participants’ technical knowledge by providing exposure to cutting-edge networking and IoT technologies. It motivated students to explore real-world applications and pursue further research directions in these fields. Additionally, the event strengthened collaboration between NPRCET ACM and TCE ACM chapters, fostering a culture of peer learning, knowledge sharing, and mutual academic growth. Many students were also encouraged to engage in future ACM India events, Summer/Winter Schools, and SIG activities."
   },
   {
     id: 2,
     title: "Peer Learning Session on Bridging Minds",
-    caption: "Dr. P. Nagaraj delivered an inspiring session on ACM and computing opportunities.",
+    caption: "Dr. P. Nagaraj, Associate Professor School of Computing SRMIST, delivered an inspiring session on ACM and computing opportunities.",
     image_url1: peer1,
     image_url2: peer2,
     heading1: "Topics Covered",
-    description1: "ACM’s global network, SIGs, proposal to initiate SIGBED at NPRCET.",
+    description1: "Dr. Nagaraj provided an in-depth introduction to ACM and its global network, highlighting how ACM connects millions of computing professionals, researchers, and students around the world. He explained the critical role ACM plays in promoting innovation, research, and academic excellence in computing. The session also focused on the significance of ACM Student Chapters and Special Interest Groups (SIGs) as vibrant platforms for knowledge sharing and technical engagement. A special proposal was introduced to initiate SIGBED (Embedded Systems) at NPRCET, aimed at fostering focused research and learning in the area of embedded systems.",
     heading2: "Student Benefits",
-    description2: "Access to ACM e-learning, research events, Summer/Winter schools.",
+    description2: "The session enlightened students on the extensive benefits of being part of ACM. Participants learned about access to ACM’s e-learning platforms, publications, and mentorship programs, providing a rich resource for continuous learning. Dr. Nagaraj emphasized the opportunities available through technical workshops, hackathons, and research seminars organized by ACM. Students were encouraged to participate in ACM Summer/Winter Schools and flagship conferences to deepen their practical knowledge. Moreover, engagement with the Eminent and Distinguished Speaker Programs (ESP & DSP) was introduced as a unique avenue to interact with leading global researchers.",
     heading3: "Outcome",
-    description3: "Inspired students to actively participate in ACM initiatives and SIGs."
+    description3: "The session successfully inspired students to actively engage in ACM initiatives and explore deeper learning avenues by contributing to SIGs and leveraging global networking opportunities. It instilled a sense of responsibility and motivation among students to be part of the global computing community and contribute to technological innovations through collaboration, research, and knowledge sharing."
   },
   {
     id: 3,
@@ -69,24 +69,24 @@ const staticGalleryItems = [
     image_url1: intercollab1,
     image_url2: intercollab2,
     heading1: "Partner",
-    description1: "BITS Pilani Dubai Campus ACM Student Chapter.",
+    description1: "The collaboration was conducted with the BITS Pilani Dubai Campus ACM Student Chapter, an active and dynamic chapter known for its innovative technical initiatives and strong industry connections.",
     heading2: "Focus",
-    description2: "Workshops, hackathons, and technical sessions.",
+    description2: "The discussion focused on exploring exciting collaboration opportunities, such as conducting joint workshops, hackathons, and technical sessions. These initiatives are designed to promote knowledge sharing, practical learning, and hands-on technical skill development among students from both campuses.",
     heading3: "Objective",
-    description3: "Enhance skills, foster innovation, and strengthen global ACM networks."
+    description3: "The main objectives of this collaboration are to enhance students’ technical skills, foster a culture of innovation, and strengthen the global ACM community network. By working together on shared initiatives, the chapters aim to provide students with greater exposure to industry trends, technical challenges, and global best practices, further empowering them as future technology leaders."
   },
   {
     id: 4,
     title: "ACM India Industry Day 2025",
-    caption: "NPRCET ACM Student Chapter showcased innovation at ACM India Industry Day.",
+    caption: "NPRCET ACM Student Chapter showcased innovation at ACM India Industry Day and was honored to meet Dr. Ponnurangam Kumaraguru, Vice President of ACM India, during the event.",
     image_url1: industry1 ,
     image_url2: industry2,
     heading1: "Keynotes & Talks",
-    description1: "AI future, decision-making in physical systems, edge AI automotive.",
+    description1: "The event featured inspiring keynote addresses and invited talks that provided deep insights into emerging technologies. The keynote was delivered by Mr. Ajay Deshpande, Senior Director at ICERTIS & Angel Investor, focusing on AI and Its Future for Students, and shedding light on the transformative role of artificial intelligence in education and industry. Dr. Arunchandar Vasan, Principal Scientist at TCS Research, spoke about Decision-Making for Physical Systems, highlighting how intelligent systems are applied in real-world scenarios. Meanwhile, Dr. Amod Jai Ganesh Anandkumar, Director at Harman Automotive, Bangalore, explained Advanced Automotive In-Cabin Experiences with Edge AI, discussing the practical applications and future potential of edge computing in the automotive sector.",
     heading2: "Panel Discussion",
-    description2: "The Future of Work & Industry with leaders from Google, TCS, Zepto.",
-    heading3: "Engagement",
-    description3: "Poster presentations, AMA sessions, and networking with industry experts."
+    description2: "A major highlight of the event was the panel discussion on “The Future of Work and Industry: How Data Science is Redefining Skills, Innovation, and Business Growth”, moderated by Dr. P. Deepalakshmi Ramkumar. The discussion offered thought-provoking perspectives on how data science is reshaping industry practices, the evolving skillsets required by professionals, and new business models emerging in the digital era. The interaction with industry leaders provided valuable insights into future career trends and industry expectations.",
+    heading3: "Engagement Activities",
+    description3: "The event promoted active engagement through several interactive sessions. Students showcased their innovative projects and research ideas during poster presentations, demonstrating real-world applications of computing concepts. In addition, Ask Me Anything (AMA) sessions created an open and engaging environment where industry experts answered participant questions, fostering meaningful knowledge exchange. The event also provided opportunities for students to network directly with industry professionals, strengthening academic-industry connections."
   },
   {
     id: 5,
@@ -95,40 +95,40 @@ const staticGalleryItems = [
     image_url1:annual3,
     image_url2: annual2,
     image_url3: annual1,
-    heading1: "Speakers",
-    description1: "Prof. Wendy Hall, Prof. Elisa Bertino, Prof. Yannis Ioannidis.",
+    heading1: "Image Details",
+    description1: "At the ACM India Annual Event 2025, held on March 1, 2025, at PSG College of Technology, Coimbatore, the NPRCET ACM Student Chapter had the distinct honor of meeting | Prof. Yannis Ioannidis, President of ACM | during the prestigious gathering of computing leaders. This was a truly inspiring moment for our team. We also had a memorable interaction with | Prof. Dame Wendy Hall (University of Southampton) and Dr. Meenakshi D’Souza President of the ACM India Council | , where we discussed emerging trends in computing and the future of technology. Additionally, our ACM team strengthened academic and professional ties by engaging in meaningful discussions with the VIT ACM Student Chapter, fostering collaboration and knowledge exchange across student communities.",
     heading2: "Awards",
-    description2: "Doctoral Dissertation Award, Early Career Researcher Award, etc.",
+    description2: "The event also hosted an inspiring Awards Ceremony, celebrating excellence in computing research and education. Prestigious recognitions such as the ACM India Doctoral Dissertation Award, Early Career Researcher Award, Outstanding Contribution to Computing Education Award, and Outstanding Contributions to Computing by a Woman Award were presented. In addition, various Chapter Awards acknowledged the active participation and achievements of ACM Student Chapters, including NPRCET ACM’s contributions.",
     heading3: "Impact",
-    description3: "Enhanced networking and engagement with global leaders in computing."
+    description3: "Our participation in the ACM India Annual Event 2025 offered an incredible opportunity for networking, learning, and engaging with global leaders in computing. We were honored to meet Prof. Yannis Ioannidis, President of ACM, and enjoyed a memorable interaction with Prof. Dame Wendy Hall and Dr. Meenakshi D’Souza, Director – Research and Development. Furthermore, the event strengthened our collaborative ties, including meaningful discussions with the VIT ACM Student Chapter. Overall, the event reinforced our commitment to excellence, innovation, and contribution in the field of computing."
   },
   {
     id: 6,
     title: "NPRCET ACM Inauguration Function",
-    caption: "Inaugural ceremony with Chief Guest Dr. Meenakshi D’Souza.",
+    caption: "Inaugural ceremony with Chief Guest Dr. Meenakshi D’Souza, President of the ACM India Council, Professor & HOD-CSE at IIIT-Bangalore.",
     image_url1: inaug3,
     image_url2: inaug2,
     image_url3: inaug1,
     heading1: "Highlights",
-    description1: "Introduction to ACM, membership benefits, career & internship opportunities.",
+    description1: "The inauguration session began with a detailed overview of the ACM organization and its activities at both national and international levels. Students were introduced to the numerous membership benefits, including access to research resources, networking opportunities, technical workshops, and industry collaborations. The session also elaborated on the available career and internship opportunities, emphasizing how being part of ACM can provide students with pathways into the technology industry through projects, contests, and industry connections.",
     heading2: "Technical Talk",
-    description2: "IoT applications, challenges, scalability, AI-driven IoT testing.",
+    description2: "A key feature of the event was the engaging technical talk on the rapidly growing domain of IoT (Internet of Things). The talk covered the real-world applications of IoT across industries, including smart cities and industrial automation. Key challenges were discussed, focusing on security, scalability, and real-time performance in large-scale IoT deployments. The speaker explained how serverless architectures enable dynamic scaling of IoT applications and how AI-driven testing frameworks are used to efficiently test and evaluate the responsiveness and reliability of IoT systems. The session provided insights into the future trends in IoT testing, such as predictive analytics and automation.",
     heading3: "Outcome",
-    description3: "Encouraged students to actively join and contribute to ACM."
+    description3: "The event successfully motivated students to actively join and contribute to the NPRCET ACM chapter. It deepened their understanding of how ACM functions as a bridge between academic knowledge and industry needs. The interaction with Dr. Meenakshi D’Souza and other speakers inspired students to explore technical opportunities, participate in research activities, and leverage ACM membership to build a strong foundation for their careers."
   },
   {
     id: 7,
     title: "IEEE Xplore Digital Library Training",
-    caption: "Webinar on 'Enhance Your Research with IEEE' by Mr. T. S. Nanda Lal.",
+    caption: "Webinar on 'Enhance Your Research with IEEE' by Mr. T. S. Nanda Lal Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.",
     image_url1:ieee1,
     image_url2:ieee2,
     image_url3:ieee3,
     heading1: "Topics",
-    description1: "IEEE Xplore navigation, research tracking, data exports, author tools.",
+    description1: "The IEEE Xplore Digital Library Training provided an in-depth introduction to IEEE Xplore, helping participants understand how to efficiently navigate the platform. The session covered how to access and retrieve research papers and journals from a vast database of over 6 million records. Participants learned techniques to identify new research areas and track emerging technology trends effectively. The training also demonstrated how to access supplemental items such as IEEE Media files, Algorithmic Codes, Datasets, and Immersive Articles. Key features included exporting mathematical equations, downloading high-resolution figures from full-text articles in HTML format, and managing personal research projects by saving and categorizing important documents.",
     heading2: "Benefits",
-    description2: "Efficient research, documentation, and collaboration.",
+    description2: "Participants gained practical skills in using IEEE Xplore for knowledge sharing and collaboration with team members, enabling efficient research workflows. The session explained how to set up alerts to receive updates on new content and journals of specific interest, which helps stay up-to-date with the latest developments in their field. It also covered research documentation and reference management techniques, essential for academic and professional projects. Advanced search techniques were explained, especially useful for campus interviews and placement preparation. The training introduced the IEEE Author Centre publishing tools, providing guidance for authors interested in publishing their work. Additionally, participants were shown how to explore upcoming conferences and events via ieee.org.",
     heading3: "Outcome",
-    description3: "Improved research skills and awareness of IEEE resources."
+    description3: "By the end of the training, participants achieved improved research skills and developed an enhanced understanding of IEEE Xplore Digital Library resources. They learned to efficiently search, retrieve, and manage research papers, export useful content, and document their references. The session boosted awareness of IEEE’s powerful tools and resources, enabling students and researchers to stay updated with the latest advancements, track technology trends, and publish their work effectively. The session concluded with a review and an online quiz to reinforce the key concepts."
   },
   {
     id: 8,
@@ -138,11 +138,11 @@ const staticGalleryItems = [
     image_url2: ori2,
     image_url3: ori3,
     heading1: "Key Highlights",
-    description1: "Introduction to ACM, benefits, competitions, and networking.",
+    description1: "The NPRCET ACM (Association for Computing Machinery) Orientation Session began with a warm welcome and a detailed introduction to the NPRCET ACM Student Chapter Website (https://nprcet.acm.org). Students were introduced to the purpose of the ACM chapter at NPRCET, which focuses on promoting computing as a science, encouraging innovation, and building a strong technical community. The session covered the membership benefits, such as access to ACM digital libraries, exclusive webinars, coding competitions, and learning resources. In addition, students learned about various events and competitions like hackathons, coding contests, workshops, and tech talks that provide hands-on experience and help develop technical skills.",
     heading2: "Opportunities",
-    description2: "Summer/Winter Schools, conferences, internship and career paths.",
+    description2: "A significant part of the session focused on technical skill development through workshops on programming, data structures, cloud computing, web development, and more. The importance of collaboration and networking was emphasized, encouraging students to work on group projects and interact with industry professionals to build valuable networks. Several upcoming events and activities were highlighted, including guest lectures, coding bootcamps, research paper presentations, and special interest group meetups, offering additional learning avenues. Students were informed about diverse opportunities for involvement, such as taking leadership roles in organizing events or contributing as content creators and community moderators. The session also shed light on career and internship opportunities by providing access to industry projects, internships, and career mentoring that help in future job placements.",
     heading3: "Outcome",
-    description3: "Students gained clarity on ACM’s role and opportunities for growth."
+    description3: "By the end of the session, students gained a clear understanding of ACM’s role in advancing computing education and research. They became aware of the significant benefits of membership, including technical resources, career advancement support, and opportunities for personal growth. Most importantly, the interactive Q&A session gave students the chance to resolve individual doubts and understand how to join ACM effectively, empowering them to take active steps toward participating in the computing community. This session laid a solid foundation for students to recognize and pursue growth opportunities through the NPRCET ACM chapter"
   }
 ];
 

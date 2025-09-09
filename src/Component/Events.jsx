@@ -25,8 +25,8 @@ const eventsData = [
     title: "Participation in ACM India Summer School 2025 IoT and Next Generation Network June 16 to June 27, 2025 (12 Days)",
     description: "IoT and Next Generation Networks exploring future-ready technologies June 16 to June 27, 2025 (12 Days)",
     date: "2025-06-16",
-    time: "9:00 AM - 5:00 PM",
-    location: "Convention Center, New Delhi",
+    time: null,
+    location: "Kalasalingam Academy of Research and Education (KARE)",
     image_url: evt5
   },
   {
@@ -238,19 +238,19 @@ function Events() {
 
         {/* Events Grid */}
         {filteredEvents.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
             {filteredEvents.map((event, index) => (
               <div
                 key={event.id || index}
                 className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gray-100"
               >
                 {/* Event Image */}
-                <div className="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-sky-600 overflow-hidden h-80 flex items-center justify-center">
+                <div className="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-sky-600 overflow-hidden  flex items-center justify-center">
                   {event.image_url ? (
                     <img
                       src={event.image_url}
                       alt={event.title || "Event"}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
                         e.target.style.display = "none";
                         e.target.parentNode.classList.add(
@@ -291,7 +291,7 @@ function Events() {
 
                 {/* Event Content */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-2 leading-tight group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-4 leading-tight group-hover:text-sky-600 transition-colors">
                     {event.title || "Untitled Event"}
                   </h3>
 
