@@ -23,13 +23,30 @@ import {
 } from "lucide-react";
 import outreach1 from '../assets/Outreach/outreach1.jpg'
 import outreach2 from '../assets/Outreach/aashiqoutreach2.jpg'
+import outreach3 from '../assets/Outreach/broucher.jpg'
+
 
 
 
 // Static outreach activities
 const outreachData = [
+{
+  id: 1,
+  title: "NPRCET ACM Outreach Program",
+  description: "Bridging the gap between academia and community by empowering students with tech skills and career guidance. The NPRCET ACM Outreach Program focuses on nurturing young minds through hands-on coding sessions, technology awareness workshops, career counseling, and collaborative projects. It helps students make informed career choices, discover emerging technologies, and gain practical experience to succeed in a fast-evolving tech landscape.",
+  date: null,
+  location: "NPR College of Engineering and Technology, Natham, Dindigul",
+  status: "ongoing",
+  image_url: outreach3,
+  heading1: "Key Outreach Segments",
+  description1: "School outreach, intra-college activities, and inter-college collaborations to develop tech skills and career awareness.",
+  heading2: "Career Paths after 12th",
+  description2: "Medical, Engineering, Tech & AI Careers, Government Jobs, and other fields like CA, Law, Design to guide students in career decisions.",
+  heading3: "Program Impact",
+  description3: "Enhances problem-solving skills, computational thinking, and provides exposure to emerging tech fields for sustainable career growth."
+  },
   {
-    id: 1,
+    id: 2,
     title: "Digital Library & Career Guidance",
     description:
       "Empowering students after 12th with access to e-books, entrance exam updates, and expert career advice for higher studies.",
@@ -49,7 +66,7 @@ const outreachData = [
     // external_link: "https://xmind.ai/embed/YPMwfeJN",
   },
   {
-    id: 2,
+    id: 3,
     title: "International Collaboration - ACM Student Chapter",
     description:
       "Strengthening ACM communities through global academic collaboration. NPRCET ACM Student Chapter connected with BITS Pilani Dubai Campus.",
@@ -193,7 +210,7 @@ function OutreachNew() {
           </div>
         </div>
 
-        {/* ✅ Fixed Grid Background */}
+ 
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-50 to-transparent"></div>
         <div
           className="absolute inset-0 opacity-20"
@@ -203,9 +220,6 @@ function OutreachNew() {
         ></div>
       </div>
 
-      {/* Rest of your component (search, grid, modal, stats, etc.) remains unchanged */}
-      {/* ... same code as before ... */}
-            {/* Enhanced Search and Filter Section */}
       <div className="max-w-7xl mx-auto px-6 -mt-10 relative z-10">
         <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-blue-100 p-8 mb-12">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -345,7 +359,7 @@ function OutreachNew() {
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2 leading-tight">
                     {activity.title || "Untitled Initiative"}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed text-sm">
+                  <p className="text-gray-600 mb-4  leading-relaxed text-sm">
                     {activity.description || "No description available"}
                   </p>
 

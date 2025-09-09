@@ -43,7 +43,7 @@ const staticGalleryItems = [
   {
     id: 1,
     title: "Awareness Session on the Upcoming Total Lunar Eclipse",
-    caption: "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
+    caption: "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses. (Date:06/09/2025)",
     image_url1: lunar1,
     image_url3: lunar2,
     heading1: "Key Highlights",
@@ -56,7 +56,7 @@ const staticGalleryItems = [
 {
     id: 2,
     title: "Knowledge Sharing Session on IoT and Next Generation Networks",
-    caption: "Mr. Aashiq Rasool S, Vice President – NPRCET ACM Student Chapter, delivered a technical presentation to ACM members.",
+    caption: "Mr. Aashiq Rasool S, Vice President – NPRCET ACM Student Chapter, delivered a technical presentation to ACM members. (Date:10/08/2025)",
     image_url1: know1,
     image_url3: know2,
     heading1: "Key Highlights",
@@ -69,7 +69,7 @@ const staticGalleryItems = [
   {
     id: 3,
     title: "Peer Learning Session on Bridging Minds",
-    caption: "Dr. P. Nagaraj, Associate Professor School of Computing SRMIST, delivered an inspiring session on ACM and computing opportunities.",
+    caption: "Dr. P. Nagaraj, Associate Professor School of Computing SRMIST, delivered an inspiring session on ACM and computing opportunities.(Date:22/04/2025)",
     image_url1: peer1,
     image_url2: peer2,
     heading1: "Topics Covered",
@@ -82,7 +82,7 @@ const staticGalleryItems = [
   {
     id: 4,
     title: "Successful International Collaboration",
-    caption: "Collaboration meeting between NPRCET ACM and BITS Pilani Dubai ACM Student Chapters.",
+    caption: "Collaboration meeting between NPRCET ACM and BITS Pilani Dubai ACM Student Chapters. (Date:04/04/2025)",
     image_url1: intercollab1,
     image_url2: intercollab2,
     heading1: "Partner",
@@ -95,7 +95,7 @@ const staticGalleryItems = [
   {
     id: 5,
     title: "ACM India Industry Day 2025",
-    caption: "NPRCET ACM Student Chapter showcased innovation at ACM India Industry Day and was honored to meet Dr. Ponnurangam Kumaraguru, Vice President of ACM India, during the event.",
+    caption: "NPRCET ACM Student Chapter showcased innovation at ACM India Industry Day and was honored to meet Dr. Ponnurangam Kumaraguru, Vice President of ACM India, during the event. (Date:29/03/2025)",
     image_url1: industry1 ,
     image_url2: industry2,
     heading1: "Keynotes & Talks",
@@ -108,7 +108,7 @@ const staticGalleryItems = [
   {
     id: 6,
     title: "ACM Annual Event 2025",
-    caption: "NPRCET ACM Student Chapter participated in ACM India Annual Event at PSG College of Tech.",
+    caption: "NPRCET ACM Student Chapter participated in ACM India Annual Event at PSG College of Tech. (Date:01/03/2025)",
     image_url1:annual3,
     image_url2: annual2,
     image_url3: annual1,
@@ -122,7 +122,7 @@ const staticGalleryItems = [
   {
     id: 7,
     title: "NPRCET ACM Inauguration Function",
-    caption: "Inaugural ceremony with Chief Guest Dr. Meenakshi D’Souza, President of the ACM India Council, Professor & HOD-CSE at IIIT-Bangalore.",
+    caption: "Inaugural ceremony with Chief Guest Dr. Meenakshi D’Souza, President of the ACM India Council, Professor & HOD-CSE at IIIT-Bangalore.(Date:03/02/2025)",
     image_url1: inaug3,
     image_url2: inaug2,
     image_url3: inaug1,
@@ -136,7 +136,7 @@ const staticGalleryItems = [
   {
     id: 8,
     title: "IEEE Xplore Digital Library Training",
-    caption: "Webinar on 'Enhance Your Research with IEEE' by Mr. T. S. Nanda Lal Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.",
+    caption: "Webinar on 'Enhance Your Research with IEEE' by Mr. T. S. Nanda Lal Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.(Date:22/01/2025)",
     image_url1:ieee1,
     image_url2:ieee2,
     image_url3:ieee3,
@@ -150,7 +150,7 @@ const staticGalleryItems = [
   {
     id: 9,
     title: "NPRCET ACM Orientation Session",
-    caption: "Series of sessions introducing ACM activities and opportunities to students.",
+    caption: "Series of sessions introducing ACM activities and opportunities to students.(Date:07/01/2025, 08/01/2025 & 09/01/2025)",
     image_url1: ori1,
     image_url2: ori2,
     image_url3: ori3,
