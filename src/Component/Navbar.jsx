@@ -71,6 +71,7 @@ const Navbar = () => {
             href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
             rel="noopener noreferrer"
             className="flex-shrink-0 group"
+            target='blank'
           >
             <div className="relative">
               <div className="bg-blue-500 text-white px-3 py-1 my-3 rounded-full text-sm font-bold animate-pulse hover:animate-none hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-1">
