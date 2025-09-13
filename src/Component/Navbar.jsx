@@ -20,9 +20,9 @@ const Navbar = () => {
     { name: 'AI Hub', href: './ai' },
     { name: 'Technology_Playground', href: './technologyplayground' },
     { name: 'Virtual Lab', href: './virtual-lab'},
-    { name: 'ContactUs', href: './contact', target: '_self', isScrollTo: true },
     { name: 'Outreach', href: './outreach' },
     { name: 'Initiatives', href: './initiatives'},
+    { name: 'ContactUs', href: './contact', target: '_self', isScrollTo: true }
   ];
 
   return (

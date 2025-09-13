@@ -61,7 +61,7 @@ const Footer = () => {
     { 
       name: 'LinkedIn', 
       icon: <Linkedin className="w-5 h-5" />, 
-      href: 'https://www.linkedin.com/company/npr-group-of-institutions',
+      href: 'https://www.linkedin.com/company/npr-group-of-institutions-offl/posts/?feedView=all',
       color: 'hover:text-blue-700'
     },
     // { 
