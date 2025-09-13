@@ -136,7 +136,7 @@ const Navbar = () => {
             <div className="flex gap-5 border-t border-blue-100 pt-3 mt-2">
 
             <a 
-                href="./recent-events" 
+                href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-blue-600 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
@@ -149,7 +149,7 @@ const Navbar = () => {
               </a>
 
               <a 
-                href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
+                href="./recent-events" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-blue-600 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
