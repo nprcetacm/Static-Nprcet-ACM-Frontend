@@ -2,6 +2,8 @@ import React from 'react';
 import nagaraj from '../assets/Testi/nagaraj.jpg'
 import meenakshi from '../assets/Testi/meenakshi.jpg'
 import ieee from '../assets/Testi/ieee.png'
+import Malarvannan  from '../assets/Testi/Malarvannan.jpg'
+
 
 const Testimonial = () => {
   const testimonials = [
@@ -27,6 +29,14 @@ const Testimonial = () => {
       designation: "Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.",
       image: ieee,
       content: "I'm thrilled that our IEEE Xplore online training for Wednesday, January 22, 2025, from 11:00 AM was a huge success, coordinated by the NPRCET Library! I believe the users gained valuable insights and hands-on experience in the Xplore platform. The participants were engaged and enthusiastic, and I'm confident that they'll apply their new skills to drive innovation and excellence. Thank you for the opportunity to deliver high-quality training and support. We're committed to helping your users achieve their goals and stay at the forefront of technology.Thank you!",
+      rating: 5
+    },
+    {
+      id: 4,
+      name: "Mr. Malarvannan M",
+      designation: " Senior Solutions Architect - Cloud | Wipro | Technology Services - Industry Cloud & Digital Coimbatore, Tamil Nadu, India",
+      image: Malarvannan,
+      content: "The https://nprcet.acm.org/ website is powered by NPRCET ACM STUDENT CHAPTER,offering fast load times, dependable performance, and a clean, intuitive user interface. The platform is efficient for both visitors and contributors, with straightforward navigation that eases information access. Areas such as documentation and backend support present opportunities for further growth",
       rating: 5
     },
   ];

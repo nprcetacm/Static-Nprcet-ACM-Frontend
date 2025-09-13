@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* NEW Icon with Animation */}
           <a 
-            href="./recent-events" 
+            href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
             rel="noopener noreferrer"
             className="flex-shrink-0 group"
           >
