@@ -3,6 +3,7 @@ import nagaraj from '../assets/Testi/nagaraj.jpg'
 import meenakshi from '../assets/Testi/meenakshi.jpg'
 import ieee from '../assets/Testi/ieee.png'
 import Malarvannan  from '../assets/Testi/Malarvannan.jpg'
+import Neelankavil  from '../assets/Testi/Neelankavil.jpg'
 
 
 const Testimonial = () => {
@@ -39,7 +40,16 @@ const Testimonial = () => {
       content: "The https://nprcet.acm.org/ website is powered by NPRCET ACM STUDENT CHAPTER,offering fast load times, dependable performance, and a clean, intuitive user interface. The platform is efficient for both visitors and contributors, with straightforward navigation that eases information access. Areas such as documentation and backend support present opportunities for further growth",
       rating: 5
     },
+        {
+      id: 5,
+      name: "Dr. John Neelankavil CMI",
+      designation: " Library Planning and Space Designing,Librarian & Faculty, DVK Bengaluru,",
+      image: Neelankavil,
+      content: "I am happy to share a few words about the NPRCET ACM Student Chapter Website – Version 2.0. This upgraded platform, with its modern design and enriched features like AI Hub, Technology Playground, and Virtual Lab, reflects remarkable vision and dedication. It truly enhances accessibility, practical learning, and collaboration for students. My heartfelt appreciation goes to the entire team for their commitment and creativity in bringing this initiative to life. Congratulations on setting a new benchmark in academic innovation!",
+      rating: 5
+    },
   ];
+
 
   const StarRating = ({ rating }) => {
     return (
@@ -101,37 +111,52 @@ const Testimonial = () => {
         <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-blue-50 to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-blue-50 to-transparent z-10 pointer-events-none"></div>
         
-        {/* Scrolling container */}
-        <div className="flex animate-marquee hover:pause-marquee">
+        {/* Scrolling container with proper setup for seamless loop */}
+        <div className="flex animate-scroll">
           {/* First set of testimonials */}
           {testimonials.map((testimonial) => (
             <TestimonialCard key={`first-${testimonial.id}`} testimonial={testimonial} />
           ))}
-          {/* Duplicate set for seamless loop */}
+          {/* Duplicate set for seamless loop - ensure exact same spacing */}
           {testimonials.map((testimonial) => (
             <TestimonialCard key={`second-${testimonial.id}`} testimonial={testimonial} />
+          ))}
+          {/* Third set to ensure smooth transition */}
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={`third-${testimonial.id}`} testimonial={testimonial} />
           ))}
         </div>
       </div>
 
-      {/* <div className="text-center mt-12">
-        <button className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-8 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-          Join Our Community
-        </button>
-      </div> */}
-
       <style jsx>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+        @keyframes scroll {
+          0% { 
+            transform: translateX(0); 
+          }
+          100% { 
+            transform: translateX(calc(-100% / 3)); 
+          }
         }
         
-        .animate-marquee {
-          animation: marquee 40s linear infinite;
+        .animate-scroll {
+          animation: scroll 45s linear infinite;
+          width: calc(300%);
         }
         
-        .hover\\:pause-marquee:hover {
+        .animate-scroll:hover {
           animation-play-state: paused;
+        }
+
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .animate-scroll {
+            animation: scroll 25s linear infinite;
+          }
         }
       `}</style>
     </div>

@@ -55,12 +55,12 @@ const Team = () => {
       image: `${principal}`,
       linkedin: "#"
     },
-        {
-      name: "Dr M Karthigai Pandian",
-      role: "Research Coordinator",
-      image: `${PriImg}`,
-      linkedin: "https://www.linkedin.com/in/dr-m-karthigai-pandian-a9321020/"
-    },
+    //     {
+    //   name: "Dr M Karthigai Pandian",
+    //   role: "Research Coordinator",
+    //   image: `${PriImg}`,
+    //   linkedin: "https://www.linkedin.com/in/dr-m-karthigai-pandian-a9321020/"
+    // },
     {
       name: "Dr A Gopi Saminathan",
       role: "Technical Mentor",
