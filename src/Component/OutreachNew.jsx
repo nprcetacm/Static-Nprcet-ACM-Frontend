@@ -24,6 +24,7 @@ import {
 import outreach1 from '../assets/Outreach/outreach1.jpg'
 import outreach2 from '../assets/Outreach/aashiqoutreach2.jpg'
 import outreach3 from '../assets/Outreach/broucher.jpg'
+import afsal from '../assets/Outreach/AfsalPost.jpg'
 
 
 
@@ -32,6 +33,21 @@ import outreach3 from '../assets/Outreach/broucher.jpg'
 const outreachData = [
 {
   id: 1,
+  title: "Achievement – Afzal Khan M",
+  description: "🎉 Congratulations, Mr. Afzal Khan M! 🎉 We are proud to announce that Afzal Khan M, a final-year CSE student and active NPRCET ACM member, won First Place at the 'Open Mic' event during EvonSys’s 10th Anniversary Celebration in Chennai on 9th September 2025. His outstanding performance during his internship at EvonSys showcases his talent, confidence, and proactive spirit—truly inspiring his peers to embrace new opportunities. 💐 Wishing Afzal continued success in all his future endeavors!",
+  date: "2025-09-09",
+  location: "EvonSys, Chennai",
+  status: "completed",
+  image_url: afsal,
+  heading1: "Event",
+  description1: "Won First Place at the 'Open Mic' event during EvonSys’s 10th Anniversary Celebration.",
+  heading2: "Internship Excellence",
+  description2: "Recognized for exceptional performance, confidence, and proactive contributions during his internship.",
+  heading3: "Inspiration",
+  description3: "His success motivates peers to embrace opportunities, showcase talents, and pursue excellence."
+},
+{
+  id: 2,
   title: "NPRCET ACM Outreach Program",
   description: "Bridging the gap between academia and community by empowering students with tech skills and career guidance. The NPRCET ACM Outreach Program focuses on nurturing young minds through hands-on coding sessions, technology awareness workshops, career counseling, and collaborative projects. It helps students make informed career choices, discover emerging technologies, and gain practical experience to succeed in a fast-evolving tech landscape.",
   date: null,
@@ -46,7 +62,7 @@ const outreachData = [
   description3: "Enhances problem-solving skills, computational thinking, and provides exposure to emerging tech fields for sustainable career growth."
   },
   {
-    id: 2,
+    id: 3,
     title: "Digital Library & Career Guidance",
     description:
       "Empowering students after 12th with access to e-books, entrance exam updates, and expert career advice for higher studies.",
@@ -66,7 +82,7 @@ const outreachData = [
     // external_link: "https://xmind.ai/embed/YPMwfeJN",
   },
   {
-    id: 3,
+    id: 4,
     title: "International Collaboration - ACM Student Chapter",
     description:
       "Strengthening ACM communities through global academic collaboration. NPRCET ACM Student Chapter connected with BITS Pilani Dubai Campus.",

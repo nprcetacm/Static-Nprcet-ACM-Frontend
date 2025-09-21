@@ -65,8 +65,24 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-
+          
+          
           {/* NEW Icon with Animation */}
+          <a 
+            href="./recent-events" 
+            rel="noopener noreferrer"
+            className="flex-shrink-0 group"
+            target='blank'
+          >
+            <div className="relative">
+              <div className="bg-blue-500 text-white px-3 py-1 my-3 rounded-full text-sm font-bold animate-pulse hover:animate-none hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-1">
+                <Sparkles size={16} className="animate-spin" style={{ animationDuration: '3s' }} />
+                <span>NEW</span>
+              </div>
+            </div>
+          </a>
+
+                    {/* NEW Icon with Animation */}
           <a 
             href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
             rel="noopener noreferrer"
@@ -80,18 +96,17 @@ const Navbar = () => {
               </div>
             </div>
           </a>    
-          
-          
-          {/* NEW Icon with Animation */}
+
           <a 
-            href="./recent-events" 
+            href="https://online.fliphtml5.com/NPRNEWSLINE/bwbb/#p=1" 
             rel="noopener noreferrer"
             className="flex-shrink-0 group"
+            target='blank'
           >
             <div className="relative">
               <div className="bg-blue-500 text-white px-3 py-1 my-3 rounded-full text-sm font-bold animate-pulse hover:animate-none hover:bg-blue-600 transition-colors duration-200 flex items-center space-x-1">
                 <Sparkles size={16} className="animate-spin" style={{ animationDuration: '3s' }} />
-                <span>NEW</span>
+                <span>NPRGI NewsLine</span>
               </div>
             </div>
           </a>
@@ -134,6 +149,18 @@ const Navbar = () => {
                         
             {/* NEW Item for Mobile - At Bottom */}
             <div className="flex gap-5 border-t border-blue-100 pt-3 mt-2">
+              <a 
+                href="./recent-events" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-blue-600 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse flex items-center space-x-1">
+                  <Sparkles size={12} className="animate-spin" style={{ animationDuration: '3s' }} />
+                  <span>NEW</span>
+                </div>
+                {/* <span className="text-lg font-bold">What's New</span> */}
+              </a>
 
             <a 
                 href="https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/" 
@@ -148,18 +175,19 @@ const Navbar = () => {
                 {/* <span className="text-lg font-bold">What's New</span> */}
               </a>
 
-              <a 
-                href="./recent-events" 
+                          <a 
+                href="https://online.fliphtml5.com/NPRNEWSLINE/bwbb/#p=1" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:text-blue-600 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <div className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold animate-pulse flex items-center space-x-1">
                   <Sparkles size={12} className="animate-spin" style={{ animationDuration: '3s' }} />
-                  <span>NEW</span>
+                  <span>NPRGI NewsLine</span>
                 </div>
                 {/* <span className="text-lg font-bold">What's New</span> */}
               </a>
+
             </div>
           </div>
         </div>
