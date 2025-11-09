@@ -101,6 +101,19 @@ const Initiatives = () => {
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
 
+                    <a 
+                      href='https://drive.google.com/file/d/1i9No9YTiXddKKuAbzGP9UjjseSGPFuQ6/view?usp=sharing' 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-indigo-600 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25"
+                    >
+                      
+                      <div className="text-left">
+                        <div>Guidelines to Join Online Course through IIRS-ISRO <br />E-CLASS Platform</div>
+                      </div>
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
+
                       <a 
                       href='/events' 
                       target="_blank" 
@@ -113,6 +126,9 @@ const Initiatives = () => {
                       </div>
                       <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
+
+
+
 
                   </div>
                 </div>

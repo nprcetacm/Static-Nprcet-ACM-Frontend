@@ -3,12 +3,50 @@ import { Calendar, MapPin, Clock, ImageOff, Sparkles } from 'lucide-react';
 import new1 from '../assets/RecentEvt/new1.png'
 import new2 from '../assets/RecentEvt/aashiq2.jpg'
 import new4 from '../assets/RecentEvt/lunar.jpg'
+import new5 from '../assets/RecentEvt/CorporationSchool.jpg'
+import new6 from '../assets/RecentEvt/SethupathiSchool.jpg'
+import new7 from '../assets/RecentEvt/algoarena.jpg'
+
+
+
+
+
 
 function Recentevents() {
   // Static array of events
   const events = [
+    {
+  id: 1,
+  title: "ALGO ARENA – The Ultimate Coding Battle",
+  description: "An intellectually engaging competitive programming event hosted on HackerRank, designed to test participants’ algorithmic thinking, logical reasoning, and coding proficiency through five challenges ranging from Basic to Hard.",
+  date: "2025-11-01",
+  time: "19:00",
+  location: "HackerRank (Online)",
+  image_url: new7
+},
+  {
+  id: 2,
+  title: "School Outreach Programme 2025 at Sethupathi Higher Secondary School, Madurai",
+  description:
+    "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
+  date: "2025-10-15",
+  time: "11:00",
+  location: "Sethupathi Higher Secondary School, Madurai",
+  image_url: new6,
+  },
+  {
+  id: 3,
+  title: "School Outreach Programme 2025 at Corporation Higher Secondary School, Sundararajapuram",
+  description:
+    "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
+  date: "2025-10-15",
+  time: "13:00",
+  location: "Corporation Higher Secondary School, Sundararajapuram, Madurai",
+  image_url: new5,
+  },
+
       {
-    id: 1,
+    id: 4,
     title: "Awareness Session on the Upcoming Total Lunar Eclipse",
     description:
       "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
@@ -17,26 +55,7 @@ function Recentevents() {
     location: "Google Meet (Online)",
     image_url: new4,
   },
-  {
-    id: 2,
-    title: "Knowledge Sharing Session on IoT and Next Generation Networks",
-    description:
-      "Mr. Aashiq Rasool S delivered a technical presentation to ACM members on IoT and Next Generation Networks.",
-    date: "2025-08-10",
-    time: "18:00-19:00",
-    location: "ACM Student Chapter, NPRCET",
-    image_url: new1,
-  },
-  {
-    id: 3,
-    title: "ACM India Summer School 2025 - IoT and Next Generation Networks",
-    description:
-      "Participation in ACM India Summer School 2025, a 12-day program focused on IoT and Next Generation Networks.",
-    date: "2025-06-16",
-    time: null,
-    location: "Kalasalingam Academy of Research and Education (KARE)",
-    image_url: new2,
-  },
+
   ];
 
   if (!events.length) {

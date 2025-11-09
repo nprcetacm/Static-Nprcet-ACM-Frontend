@@ -4,6 +4,7 @@ import meenakshi from '../assets/Testi/meenakshi.jpg'
 import ieee from '../assets/Testi/ieee.png'
 import Malarvannan  from '../assets/Testi/Malarvannan.jpg'
 import Neelankavil  from '../assets/Testi/Neelankavil.jpg'
+import Yannis from '../assets/Testi/Yannis.jpg'
 
 
 const Testimonial = () => {
@@ -26,6 +27,14 @@ const Testimonial = () => {
     },
     {
       id: 3,
+      name: "Prof. Yannis Ioannidis",
+      designation: "Greek computer scientist and current President of the Association for Computing Machinery (ACM).",
+      image: Yannis,
+      content: "Dear members of NPRCET ACM Student Chapter,Thank you very much for your message. What you have achieved so far and your future plans are really unique. Sincere congratulations! I’m glad you reached out and informed us about these developments – they speak loudly and give us valuable feedback about the great things that ACM can help young community members achieve and may serve as exemplars for others to follow.",
+      rating: 5
+    },
+    {
+      id: 4,
       name: "Mr. Nanda Lal T S",
       designation: "Senior Training Manager, EBSCO Information Services & IEEE Explore Digital Library, New Delhi, India.",
       image: ieee,
@@ -33,7 +42,7 @@ const Testimonial = () => {
       rating: 5
     },
     {
-      id: 4,
+      id: 5,
       name: "Mr. Malarvannan M",
       designation: " Senior Solutions Architect - Cloud | Wipro | Technology Services - Industry Cloud & Digital Coimbatore, Tamil Nadu, India",
       image: Malarvannan,
@@ -41,7 +50,7 @@ const Testimonial = () => {
       rating: 5
     },
         {
-      id: 5,
+      id: 6,
       name: "Dr. John Neelankavil CMI",
       designation: " Library Planning and Space Designing,Librarian & Faculty, DVK Bengaluru,",
       image: Neelankavil,

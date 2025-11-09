@@ -16,13 +16,24 @@ import evt3 from "../assets/Events/NPRCET-Inaug-Post.jpg"
 import evt4 from "../assets/Events/peer_learning.jpg"
 import evt5 from "../assets/Events/aashiq.jpg"
 import evt6 from "../assets/Events/lunar2.jpg"
+import evt7 from "../assets/Events/algoarena.jpg"
 import { useNavigate } from "react-router-dom";
 
 
 // Static array of event objects
 const eventsData = [
-    {
+{
     id: 1,
+    title: "ALGO ARENA – The Ultimate Coding Battle",
+    description: "An intellectually engaging competitive programming event hosted on HackerRank.",
+    date: "2025-11-01",
+    time: "07:00 PM - 08:00 PM",
+    location: "HackerRank (Online)",
+    image_url: evt7
+    },
+
+    {
+    id: 2,
     title: "Special Awareness Session on the Upcoming Total Lunar Eclipse",
     description: "Awareness Session on the Upcoming Total Lunar Eclipse with renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru!",
     date: "2025-09-06",
@@ -31,7 +42,7 @@ const eventsData = [
     image_url: evt6
   },
   {
-    id: 2,
+    id: 3,
     title: "Participation in ACM India Summer School 2025 IoT and Next Generation Network June 16 to June 27, 2025 (12 Days)",
     description: "IoT and Next Generation Networks exploring future-ready technologies June 16 to June 27, 2025 (12 Days)",
     date: "2025-06-16",
@@ -40,7 +51,7 @@ const eventsData = [
     image_url: evt5
   },
   {
-    id: 3,
+    id: 4,
     title: "Peer Learning session on Bridging Minds:Sustaining Knowledge Exchange",
     description: "Sustaining Knowledge Exchange fostering collaboration and shared growth",
     date: "2025-04-22",
@@ -49,7 +60,7 @@ const eventsData = [
     image_url: evt4
   },
   {
-    id: 4,
+    id: 5,
     title: "NPRCET ACM Student Chapter Inauguration Function",
     description: "Inauguration of the NPRCET ACM Student Chapter marking the beginning of a new journey in computing and innovation",
     date: "2025-02-03",
@@ -58,7 +69,7 @@ const eventsData = [
     image_url:evt3
   },
   {
-    id: 5,
+    id: 6,
     title: "Webinar on Enhance Your Research with IEEE",
     description: "An insightful webinar guiding students and researchers on leveraging IEEE resources to enhance the quality and impact of their research",
     date: "2025-01-22",
@@ -67,7 +78,7 @@ const eventsData = [
     image_url: evt2
   },
   {
-    id: 6,
+    id: 7,
     title: "NPRCET ACM Student Chapter Pongal Celebration",
     description: "NPRCET ACM Student Chapter joyfully celebrated Pongal with tradition, unity, and festive spirit",
     date: "2025-01-11",

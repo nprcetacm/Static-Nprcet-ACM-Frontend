@@ -25,14 +25,46 @@ import outreach1 from '../assets/Outreach/outreach1.jpg'
 import outreach2 from '../assets/Outreach/aashiqoutreach2.jpg'
 import outreach3 from '../assets/Outreach/broucher.jpg'
 import afsal from '../assets/Outreach/AfsalPost.jpg'
+import sethu from '../assets/Outreach/SethupathiSchool.jpg'
+import corp from '../assets/Outreach/CorporationSchool.jpg'
 
 
 
 
 // Static outreach activities
 const outreachData = [
-{
+  {
   id: 1,
+  title: "School Outreach Programme 2025 at Sethupathi Higher Secondary School, Madurai",
+  description: "💡 The NPRCET ACM Student Chapter organized the School Outreach Programme 2025 at Sethupathi Higher Secondary School, Madurai, to empower students with knowledge of coding, artificial intelligence, and domain-based learning. The sessions encouraged logical thinking, creativity, and digital awareness among school students.",
+  date: "2025-10-15",
+  location: "Sethupathi Higher Secondary School, Madurai",
+  status: "completed",
+  image_url: sethu,
+  heading1: "Event",
+  description1: "Interactive sessions on Programming Fundamentals, Artificial Intelligence, Domain-Based Learning, LinkedIn for Career Growth, Free Online Resources, and Foreign Language Awareness.",
+  heading2: "Organizing Team",
+  description2: "Guided by Mr. V. Virumapandi, Career Development Advisor (Faculty Sponsor), and conducted by Aswanthwin Fried S (President), Rajamannar NG (Treasurer), and Afzal Khan M (Membership Chair).",
+  heading3: "Impact",
+  description3: "The outreach inspired young minds to explore technology-driven careers, promoted computational thinking, and strengthened the spirit of learning and innovation."
+},
+{
+  id: 2,
+  title: "School Outreach Programme 2025 at Corporation Higher Secondary School, Sundararajapuram",
+  description: "The NPRCET ACM Student Chapter conducted the School Outreach Programme 2025 at Corporation Higher Secondary School, Sundararajapuram, to introduce students to the fundamentals of programming and emerging technologies. The event aimed to build awareness about future-ready digital skills and STEM education.",
+  date: "2025-10-15",
+  location: "Corporation Higher Secondary School, Sundararajapuram, Madurai",
+  status: "completed",
+  image_url: corp,
+  heading1: "Event",
+  description1: "Hands-on sessions covering Programming Basics, Artificial Intelligence, Domain-Based Learning, LinkedIn for Career Growth, and Free Learning Platforms.",
+  heading2: "Organizing Team",
+  description2: "Guided by Mr. V. Virumapandi, Career Development Advisor (Faculty Sponsor), and executed by Aswanthwin Fried S (President), Rajamannar NG (Treasurer), and Afzal Khan M (Membership Chair).",
+  heading3: "Impact",
+  description3: "The outreach inspired young minds to explore technology-driven careers, promoted computational thinking, and strengthened the spirit of learning and innovation."
+},
+{
+  id: 3,
   title: "Achievement – Afzal Khan M",
   description: "🎉 Congratulations, Mr. Afzal Khan M! 🎉 We are proud to announce that Afzal Khan M, a final-year CSE student and active NPRCET ACM member, won First Place at the 'Open Mic' event during EvonSys’s 10th Anniversary Celebration in Chennai on 9th September 2025. His outstanding performance during his internship at EvonSys showcases his talent, confidence, and proactive spirit—truly inspiring his peers to embrace new opportunities. 💐 Wishing Afzal continued success in all his future endeavors!",
   date: "2025-09-09",
@@ -47,7 +79,7 @@ const outreachData = [
   description3: "His success motivates peers to embrace opportunities, showcase talents, and pursue excellence."
 },
 {
-  id: 2,
+  id: 4,
   title: "NPRCET ACM Outreach Program",
   description: "Bridging the gap between academia and community by empowering students with tech skills and career guidance. The NPRCET ACM Outreach Program focuses on nurturing young minds through hands-on coding sessions, technology awareness workshops, career counseling, and collaborative projects. It helps students make informed career choices, discover emerging technologies, and gain practical experience to succeed in a fast-evolving tech landscape.",
   date: null,
@@ -62,11 +94,11 @@ const outreachData = [
   description3: "Enhances problem-solving skills, computational thinking, and provides exposure to emerging tech fields for sustainable career growth."
   },
   {
-    id: 3,
+    id:5,
     title: "Digital Library & Career Guidance",
     description:
       "Empowering students after 12th with access to e-books, entrance exam updates, and expert career advice for higher studies.",
-    date: "2025-08-10",
+    date: "2025-05-29",
     location: "NPR Group of Institutions – Online & Campus",
     status: "ongoing",
     image_url: outreach1,
@@ -82,7 +114,7 @@ const outreachData = [
     // external_link: "https://xmind.ai/embed/YPMwfeJN",
   },
   {
-    id: 4,
+    id:6,
     title: "International Collaboration - ACM Student Chapter",
     description:
       "Strengthening ACM communities through global academic collaboration. NPRCET ACM Student Chapter connected with BITS Pilani Dubai Campus.",

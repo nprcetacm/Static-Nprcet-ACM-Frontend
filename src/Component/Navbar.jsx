@@ -98,7 +98,7 @@ const Navbar = () => {
           </a>    
 
           <a 
-            href="https://online.fliphtml5.com/NPRNEWSLINE/bwbb/#p=1" 
+            href="https://online.fliphtml5.com/NPRNEWSLINE/owqn/#p=1" 
             rel="noopener noreferrer"
             className="flex-shrink-0 group"
             target='blank'
