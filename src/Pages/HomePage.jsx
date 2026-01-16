@@ -8,10 +8,12 @@ import Sponsors from '../Component/Sponsors'
 import Contactsec from '../Component/Contactsec'
 import Footer from '../Component/Footer'
 import Testi from '../Component/Testi'
+import LandingPopup from '../Component/LandingPopup'
 
 function HomePage() {
   return (
     <>
+    <LandingPopup/>
     <Navbar/>
     <Homebanner/>
     <AboutNprcet/>

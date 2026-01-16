@@ -12,7 +12,7 @@ function RecentevtPage() {
         try{
           const res = await axios.get(`${import.meta.env.VITE_API_URL}/recent-events`)
           setREvents(res.data)
-          console.log("Fetched REvents:",res.data)
+          // console.log("Fetched REvents:",res.data)
         }
         catch(err){
           console.log("Error in Fetching Data")

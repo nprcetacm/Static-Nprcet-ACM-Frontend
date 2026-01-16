@@ -99,7 +99,6 @@ function Events() {
 
   // Use the static events data
   const events = eventsData;
-  console.log("Events data:", events);
 
   const formatDate = (dateString) => {
     if (!dateString) return "Date TBD";

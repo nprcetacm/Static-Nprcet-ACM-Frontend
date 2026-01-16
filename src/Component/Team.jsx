@@ -7,7 +7,7 @@ import kalpana from '../Team-Assets/prof-photos/KALPANA C.jpg'
 import ummu from '../Team-Assets/prof-photos/UMMUGULTHUM NATCHIAR S.jpg'
 import img5 from '../Team-Assets/prof-pics/5.png'
 import img4 from '../Team-Assets/prof-pics/4.png'
-import img7 from '../Team-Assets/prof-pics/7.png'
+import img7 from '../Team-Assets/prof-pics/7.jpg'
 import img6 from '../Team-Assets/prof-pics/6.png'
 import stud1 from '../Team-Assets/stud-photos/Aswanth.jpg'
 import stud2 from '../Team-Assets/stud-photos/AASHIQ RASOOLSATHAKATHULLAHS.jpg'
@@ -40,7 +40,7 @@ import stud28 from '../Team-Assets/stud-photos/newmem/Pravinaida S.jpg'
 import stud29 from '../Team-Assets/stud-photos/newmem/Sangavi K.jpg'
 import stud30 from '../Team-Assets/stud-photos/newmem/SHAHANA S.jpg'
 import stud31 from '../Team-Assets/stud-photos/newmem/Thanushri S.jpg'
-
+import stud32 from '../Team-Assets/stud-photos/newmem/shifaya-mubeen-S.jpg'
 
 
 
@@ -61,12 +61,12 @@ const Team = () => {
     //   image: `${PriImg}`,
     //   linkedin: "https://www.linkedin.com/in/dr-m-karthigai-pandian-a9321020/"
     // },
-    {
-      name: "Dr A Gopi Saminathan",
-      role: "Technical Mentor",
-      image: `${gopi}`,
-      linkedin: "#"
-    },
+    // {
+    //   name: "Dr A Gopi Saminathan",
+    //   role: "Technical Mentor",
+    //   image: `${gopi}`,
+    //   linkedin: "#"
+    // },
     {
       name: "Mr K Aruna Senthil Kumar",
       role: "Community Engagement Officer",
@@ -315,6 +315,13 @@ const Team = () => {
       name: "Ms S Thanushri",
       role: "Technical Support Coordinator",
       image: `${stud31}`,
+      linkedin: "#",
+      github: "#"
+    },
+    {
+      name: "Ms S Shifaya Mubeen",
+      role: "Technical Support Coordinator",
+      image: `${stud32}`,
       linkedin: "#",
       github: "#"
     }

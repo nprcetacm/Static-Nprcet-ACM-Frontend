@@ -14,6 +14,8 @@ import AIhubPage from './Pages/AIhubPage';
 import TechPage from './Pages/TechPage';
 import ContactSection from './Component/Contactsec';
 import VirtualLab from './Component/VirtualLab';
+import Achievements from './Component/Achievements';
+import ProudMom from './Pages/ProudMom';
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
         <Route path='/initiatives' element={<InitiativesPage/>} />
         <Route path='/contact' element={<ContactSection/>} />
         <Route path='/virtual-lab' element={<VirtualLab/>} />
+        <Route path='/proudmoments' element={<ProudMom/>}/>
         <Route path='*' element={<Notfound/>} />
 
         {/* Admin Login */}
