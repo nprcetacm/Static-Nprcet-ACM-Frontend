@@ -6,7 +6,7 @@ import new4 from '../assets/RecentEvt/lunar.jpg'
 import new5 from '../assets/RecentEvt/CorporationSchool.jpg'
 import new6 from '../assets/RecentEvt/SethupathiSchool.jpg'
 import new7 from '../assets/RecentEvt/algoarena.jpg'
-
+import new8 from '../assets/RecentEvt/Industry_expert_talk.jpeg'
 
 
 
@@ -16,46 +16,59 @@ function Recentevents() {
   // Static array of events
   const events = [
     {
-  id: 1,
-  title: "ALGO ARENA – The Ultimate Coding Battle",
-  description: "An intellectually engaging competitive programming event hosted on HackerRank, designed to test participants’ algorithmic thinking, logical reasoning, and coding proficiency through five challenges ranging from Basic to Hard.",
-  date: "2025-11-01",
-  time: "19:00",
-  location: "HackerRank (Online)",
-  image_url: new7
-},
-  {
-  id: 2,
-  title: "School Outreach Programme 2025 at Sethupathi Higher Secondary School, Madurai",
-  description:
-    "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
-  date: "2025-10-15",
-  time: "11:00",
-  location: "Sethupathi Higher Secondary School, Madurai",
-  image_url: new6,
-  },
-  {
-  id: 3,
-  title: "School Outreach Programme 2025 at Corporation Higher Secondary School, Sundararajapuram",
-  description:
-    "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
-  date: "2025-10-15",
-  time: "13:00",
-  location: "Corporation Higher Secondary School, Sundararajapuram, Madurai",
-  image_url: new5,
-  },
+      id: 1,
+      title: "Industry Expert Talk – Cyber Security in Industrial Systems",
+      description:
+        "An insightful Industry Expert Talk organized by the NPRCET ACM Student Chapter focusing on cyber security challenges in industrial systems. The session highlighted real-world industrial cyber threats, security risks in Operational Technology (OT) and Industrial IoT environments, and practical solutions adopted by industries. The talk was delivered by Mr. M. Malarvannan, Senior Architect – Industry Cloud & Digital, Wipro Technologies, providing students with valuable industry exposure and career-oriented insights.",
+      time: "11:00",
+      date: "2026-01-31",
+      location: "Srinivasa Ramanujam Hall",
+      image_url: new8,
+    },
+    {
+      id: 2,
+      title: "ALGO ARENA – The Ultimate Coding Battle",
+      description:
+        "An intellectually engaging competitive programming event hosted on HackerRank, designed to test participants’ algorithmic thinking, logical reasoning, and coding proficiency through five challenges ranging from Basic to Hard.",
+      date: "2025-11-01",
+      time: "19:00",
+      location: "HackerRank (Online)",
+      image_url: new7,
+    },
+    {
+      id: 3,
+      title:
+        "School Outreach Programme 2025 at Sethupathi Higher Secondary School, Madurai",
+      description:
+        "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
+      date: "2025-10-15",
+      time: "11:00",
+      location: "Sethupathi Higher Secondary School, Madurai",
+      image_url: new6,
+    },
+    {
+      id: 4,
+      title:
+        "School Outreach Programme 2025 at Corporation Higher Secondary School, Sundararajapuram",
+      description:
+        "NPRCET ACM Student Chapter organized an outreach to empower students with coding, AI, and domain learning, promoting creativity, logical thinking, and digital awareness",
+      date: "2025-10-15",
+      time: "13:00",
+      location:
+        "Corporation Higher Secondary School, Sundararajapuram, Madurai",
+      image_url: new5,
+    },
 
-      {
-    id: 4,
-    title: "Awareness Session on the Upcoming Total Lunar Eclipse",
-    description:
-      "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
-    date: "2025-09-06",
-    time: "18:00-19:00",
-    location: "Google Meet (Online)",
-    image_url: new4,
-  },
-
+    {
+      id: 5,
+      title: "Awareness Session on the Upcoming Total Lunar Eclipse",
+      description:
+        "Renowned astrophysicist Dr. Chrisphin Karthick from the Indian Institute of Astrophysics, Bengaluru delivered an in-depth scientific session on lunar eclipses.",
+      date: "2025-09-06",
+      time: "18:00-19:00",
+      location: "Google Meet (Online)",
+      image_url: new4,
+    },
   ];
 
   if (!events.length) {
