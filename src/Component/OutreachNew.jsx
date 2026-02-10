@@ -30,7 +30,7 @@ import sethu from '../assets/Outreach/SethupathiSchool.jpg'
 import corp from '../assets/Outreach/CorporationSchool.jpg'
 import tshirtSupport from '../assets/Outreach/tshirt.jpg'
 import tshirtSupport2 from '../assets/Outreach/tshirt1.jpeg'
-import tshirtSupport3 from '../assets/Outreach/tshirt2.jpg'
+import tshirtSupport3 from '../assets/Outreach/tshirt2.JPG'
 import tshirtSupport4 from '../assets/Outreach/tshirt_full.jpg'
 
 // --- DATA ---
