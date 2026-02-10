@@ -1,13 +1,13 @@
-import React from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
+import React from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
   Github,
   ExternalLink,
   Heart,
@@ -15,79 +15,120 @@ import {
   MessageCircle,
   Users,
   Calendar,
-  ArrowUp
-} from 'lucide-react';
+  ArrowUp,
+} from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const quickLinks = [
-    { name: 'About Us', href: '#about-acm' },
-    { name: 'Vision & Mission', href: '#vision-mission-goals' },
-    { name: 'Events', href: '/events' },
-    { name: 'Sponsors', href: '#sponsors-section' },
-    { name: 'Contact', href: '#contact' }
+    { name: "About Us", href: "#about-acm" },
+    { name: "Vision & Mission", href: "#vision-mission-goals" },
+    { name: "Events", href: "/events" },
+    { name: "Sponsors", href: "#sponsors-section" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const resources = [
-    { name: 'ACM Digital Library', href: 'https://dl.acm.org/', external: true },
-    { name: 'NPRCET Digital Library', href: 'https://idp.nprcet.org',external:true },
-    { name: 'Tech News', href: 'https://technews.acm.org/',external:true },
-    { name: 'Infosys Springboard', href: 'https://infyspringboard.onwingspan.com/web/en/login#iss=https://infyspringboard.onwingspan.com/auth/realms/infyspringboard', external:true },
-    { name: 'TCS iON', href: 'https://www.tcsion.com/',external:true }
+    {
+      name: "ACM Digital Library",
+      href: "https://dl.acm.org/",
+      external: true,
+    },
+    {
+      name: "NPRCET Digital Library",
+      href: "https://idp.nprcet.org",
+      external: true,
+    },
+    { name: "Tech News", href: "https://technews.acm.org/", external: true },
+    {
+      name: "Infosys Springboard",
+      href: "https://infyspringboard.onwingspan.com/web/en/login#iss=https://infyspringboard.onwingspan.com/auth/realms/infyspringboard",
+      external: true,
+    },
+    { name: "TCS iON", href: "https://www.tcsion.com/", external: true },
   ];
 
   const socialLinks = [
-    { 
-      name: 'Facebook', 
-      icon: <Facebook className="w-5 h-5" />, 
-      href: 'https://www.facebook.com/nprinstitutions',
-      color: 'hover:text-blue-600'
+    {
+      name: "Facebook",
+      icon: <Facebook className="w-5 h-5" />,
+      href: "https://www.facebook.com/nprinstitutions",
+      color: "hover:text-blue-600",
     },
-    { 
-      name: 'Whatsapp', 
-      icon: <MessageCircle className="w-5 h-5" />, 
-      href: 'https://whatsapp.com/channel/0029Vaid9cS05MUcZuNT5a13',
-      color: 'hover:text-green-500'
+    {
+      name: "Whatsapp",
+      icon: <MessageCircle className="w-5 h-5" />,
+      href: "https://whatsapp.com/channel/0029Vaid9cS05MUcZuNT5a13",
+      color: "hover:text-green-500",
     },
-    { 
-      name: 'Instagram', 
-      icon: <Instagram className="w-5 h-5" />, 
-      href: 'https://www.instagram.com/npr_groupofinstitutions_offl',
-      color: 'hover:text-pink-600'
+    {
+      name: "Instagram",
+      icon: <Instagram className="w-5 h-5" />,
+      href: "https://www.instagram.com/npr_groupofinstitutions_offl",
+      color: "hover:text-pink-600",
     },
-    { 
-      name: 'LinkedIn', 
-      icon: <Linkedin className="w-5 h-5" />, 
-      href: 'https://www.linkedin.com/company/npr-group-of-institutions-offl/posts/?feedView=all',
-      color: 'hover:text-blue-700'
+    {
+      name: "LinkedIn",
+      icon: <Linkedin className="w-5 h-5" />,
+      href: "https://www.linkedin.com/company/npr-group-of-institutions-offl/posts/?feedView=all",
+      color: "hover:text-blue-700",
     },
-    // { 
-    //   name: 'GitHub', 
-    //   icon: <Github className="w-5 h-5" />, 
+    // {
+    //   name: 'GitHub',
+    //   icon: <Github className="w-5 h-5" />,
     //   href: '#',
     //   color: 'hover:text-gray-900'
     // }
   ];
 
   const stats = [
-    { icon: <Users className="w-6 h-6" />, number: '60+', label: 'Active Members' },
-    { icon: <Calendar className="w-6 h-6" />, number: '10+', label: 'Events Organized' },
+    {
+      icon: <Users className="w-6 h-6" />,
+      number: "60+",
+      label: "Active Members",
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      number: "10+",
+      label: "Events Organized",
+    },
     // { icon: <Code className="w-6 h-6" />, number: '100+', label: 'Projects Completed' },
-    { icon: <Globe className="w-6 h-6" />, number: '10+', label: 'Industry Partners' }
+    {
+      icon: <Globe className="w-6 h-6" />,
+      number: "10+",
+      label: "Industry Partners",
+    },
   ];
 
   return (
-    <footer id="footer" className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <footer
+      id="footer"
+      className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20"></div>
-        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <defs>
-            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" opacity="0.1"/>
+            <pattern
+              id="grid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 40 0 L 0 0 0 40"
+                fill="none"
+                stroke="white"
+                strokeWidth="1"
+                opacity="0.1"
+              />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -100,14 +141,16 @@ const Footer = () => {
           <div className="container mx-auto px-6 py-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="text-center group hover:scale-105 transition-transform duration-300"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-4 group-hover:shadow-lg transition-shadow duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                  <div className="text-2xl font-bold text-white mb-1">
+                    {stat.number}
+                  </div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -125,9 +168,10 @@ const Footer = () => {
                   NPRCET ACM Student Chapter
                 </h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Empowering the next generation of computing professionals through innovation, 
-                  collaboration, and excellence in technology education. Join us in shaping the 
-                  future of computing and technology.
+                  Empowering the next generation of computing professionals
+                  through innovation, collaboration, and excellence in
+                  technology education. Join us in shaping the future of
+                  computing and technology.
                 </p>
               </div>
 
@@ -135,7 +179,10 @@ const Footer = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center text-gray-300 hover:text-white transition-colors duration-200">
                   <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:nprcetacm@nprcolleges.org" className="hover:underline">
+                  <a
+                    href="mailto:nprcetacm@nprcolleges.org"
+                    className="hover:underline"
+                  >
                     nprcetacm@nprcolleges.org
                   </a>
                 </div>
@@ -147,13 +194,17 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start text-gray-300">
                   <MapPin className="w-5 h-5 mr-3 text-blue-400 mt-1" />
-                  <span>65RP+W8P, NPR Nagar, Natham, Dindigul, Tamil Nadu 624401</span>
+                  <span>
+                    65RP+W8P, NPR Nagar, Natham, Dindigul, Tamil Nadu 624401
+                  </span>
                 </div>
               </div>
 
               {/* Social Links */}
               <div>
-                <h4 className="font-semibold text-white mb-4">Connect With Us</h4>
+                <h4 className="font-semibold text-white mb-4">
+                  Connect With Us
+                </h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -161,7 +212,7 @@ const Footer = () => {
                       href={social.href}
                       className={`p-3 bg-white/10 rounded-full text-gray-300 ${social.color} transition-all duration-200 hover:bg-white/20 hover:scale-110`}
                       aria-label={social.name}
-                      target='blank'
+                      target="blank"
                     >
                       {social.icon}
                     </a>
@@ -197,7 +248,9 @@ const Footer = () => {
                     <a
                       href={resource.href}
                       target={resource.external ? "_blank" : undefined}
-                      rel={resource.external ? "noopener noreferrer" : undefined}
+                      rel={
+                        resource.external ? "noopener noreferrer" : undefined
+                      }
                       className="text-gray-300 hover:text-white hover:underline transition-colors duration-200 flex items-center group"
                     >
                       <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3 group-hover:scale-125 transition-transform duration-200"></span>
@@ -219,7 +272,9 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               {/* Copyright */}
               <div className="flex items-center text-gray-300">
-                <span>&copy; 2025 NPRCET ACM Student Chapter.</span>
+                <span>
+                  &copy; {new Date().getFullYear()} NPRCET ACM Student Chapter.
+                </span>
                 <span> All Rights Reserved.</span>
               </div>
 
@@ -237,7 +292,8 @@ const Footer = () => {
             {/* Additional Info */}
             <div className="mt-6 pt-6 border-t border-white/5 text-center">
               <p className="text-gray-400 text-sm">
-                Fostering innovation, collaboration, and excellence in computing education
+                Fostering innovation, collaboration, and excellence in computing
+                education
               </p>
             </div>
           </div>
