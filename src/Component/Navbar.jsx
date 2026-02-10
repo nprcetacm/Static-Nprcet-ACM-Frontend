@@ -344,7 +344,7 @@ const Navbar = () => {
                 A
               </div>
               <div>
-                <h3 className="font-bold text-base text-gray-800">ACM Menu</h3>
+                <h3 className="font-bold text-base text-gray-800">NPRCET ACM Menu</h3>
                 <p className="text-xs text-gray-500">Explore our platform</p>
               </div>
             </div>
@@ -444,12 +444,7 @@ const Navbar = () => {
           </div>
           
           {/* Footer */}
-          <div className="p-5 border-t border-gray-200 bg-white">
-            <div className="text-center">
-              <p className="text-xs font-semibold text-gray-900 mb-1">NPRCET ACM Student Chapter</p>
-              <p className="text-[10px] text-gray-500">Empowering Innovation Since 2019</p>
-            </div>
-          </div>
+          
         </div>
       </div>
     </>
