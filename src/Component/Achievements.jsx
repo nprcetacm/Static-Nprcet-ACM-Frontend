@@ -20,7 +20,6 @@ const eventsData = [
         images: [post1],
         type: "simple",
         category: "Achievement",
-        // date: "Feb 2026"
     },
     {
         id: 2,
@@ -30,7 +29,6 @@ const eventsData = [
         images: [post2],
         type: "simple",
         category: "Appreciation",
-        // date: "Jan 2026"
     },
     {
         id: 3,
@@ -40,7 +38,6 @@ const eventsData = [
         images: [proud1, proud2, proud3, proud4],
         type: "gallery",
         category: "Recognition",
-        // date: "Dec 2025",
         sections: [
             {
                 heading: "Recognition Highlights",
@@ -60,11 +57,10 @@ const eventsData = [
         id: 4,
         title: "Institutional Appreciation & Proud Moment",
         description: "NPRCET ACM Student Chapter received institutional appreciation for being featured on the ACM India Student Chapter Website for reporting the highest number of activities.",
-        fullDescription: "Appreciation & Proud Moment 🌟\n\nA moment of great pride for NPR College of Engineering and Technology and the NPRCET ACM Student Chapter. The college management proudly released an official appreciation poster congratulating the NPRCET ACM Student Chapter for being featured on the ACM India Student Chapter Website. This recognition was awarded for reporting the highest number of student chapter activities, highlighting the chapter’s consistency, leadership, and commitment to professional excellence.\n\nThe appreciation poster, designed and published by the institution, reflects the strong institutional support and encouragement provided to student-led professional bodies like ACM. Such recognition reinforces the college’s commitment to promoting technical excellence, student engagement, and national-level visibility through active participation in ACM initiatives.\n\nThis proud moment stands as a testament to the collective efforts of our students, faculty coordinators, and management in building a vibrant and impactful ACM Student Chapter that contributes meaningfully to the larger student community.",
+        fullDescription: "Appreciation & Proud Moment 🌟\n\nA moment of great pride for NPR College of Engineering and Technology and the NPRCET ACM Student Chapter. The college management proudly released an official appreciation poster congratulating the NPRCET ACM Student Chapter for being featured on the ACM India Student Chapter Website. This recognition was awarded for reporting the highest number of student chapter activities, highlighting the chapter's consistency, leadership, and commitment to professional excellence.\n\nThe appreciation poster, designed and published by the institution, reflects the strong institutional support and encouragement provided to student-led professional bodies like ACM. Such recognition reinforces the college's commitment to promoting technical excellence, student engagement, and national-level visibility through active participation in ACM initiatives.\n\nThis proud moment stands as a testament to the collective efforts of our students, faculty coordinators, and management in building a vibrant and impactful ACM Student Chapter that contributes meaningfully to the larger student community.",
         images: [AppreciationPoster],
         type: "simple",
         category: "Institutional",
-        // date: "Feb 2026"
     }
 ];
 
@@ -77,9 +73,19 @@ function Achievements() {
     useEffect(() => {
         if (activeItem || isFullscreen) {
             document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
         } else {
             document.body.style.overflow = 'unset';
+            document.body.style.position = 'static';
+            document.body.style.width = 'auto';
         }
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+            document.body.style.position = 'static';
+            document.body.style.width = 'auto';
+        };
     }, [activeItem, isFullscreen]);
 
     // --- HANDLERS ---
@@ -195,10 +201,11 @@ function Achievements() {
         const hasMultiple = activeItem.images.length > 1;
 
         return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 lg:p-6">
                 
-                {/* Scrollbar CSS */}
+                {/* Enhanced Scrollbar CSS with Mobile Fixes */}
                 <style>{`
+                    /* Desktop Scrollbar */
                     .custom-scrollbar::-webkit-scrollbar {
                         width: 8px;
                     }
@@ -213,10 +220,33 @@ function Achievements() {
                     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
                         background: #94a3b8;
                     }
+                    
                     /* Firefox */
                     .custom-scrollbar {
                         scrollbar-width: thin;
                         scrollbar-color: #cbd5e1 #f1f5f9;
+                    }
+                    
+                    /* Critical Mobile Scroll Fixes */
+                    .mobile-scroll-fix {
+                        -webkit-overflow-scrolling: touch;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        overscroll-behavior: contain;
+                        position: relative;
+                    }
+                    
+                    /* Force hardware acceleration for smooth scrolling */
+                    .mobile-scroll-fix {
+                        transform: translateZ(0);
+                        -webkit-transform: translateZ(0);
+                        will-change: scroll-position;
+                    }
+                    
+                    /* Prevent bounce on iOS/Safari */
+                    .modal-container {
+                        position: fixed;
+                        overflow: hidden;
                     }
                 `}</style>
 
@@ -226,19 +256,19 @@ function Achievements() {
                     onClick={closeSpotlight}
                 />
 
-                {/* Modal Window - Fixed Height on Desktop to ensure scroll logic works */}
-                <div className="relative w-full max-w-6xl h-[90vh] bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row animate-in fade-in zoom-in duration-300 ring-1 ring-gray-200">
+                {/* Modal Window */}
+                <div className="modal-container relative w-full h-full sm:h-[90vh] sm:max-w-6xl bg-white sm:rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col lg:flex-row animate-in fade-in zoom-in duration-300 ring-1 ring-gray-200">
                     
                     {/* Close Button Mobile */}
                     <button 
                         onClick={closeSpotlight}
-                        className="lg:hidden absolute top-4 right-4 z-50 bg-white text-gray-800 p-2 rounded-full shadow-lg"
+                        className="lg:hidden absolute top-4 right-4 z-50 bg-white text-gray-800 p-2.5 rounded-full shadow-lg hover:bg-gray-100 active:scale-95 transition-all"
                     >
                         <X size={20} />
                     </button>
 
-                    {/* Left: Image (Stays Fixed/Fit) */}
-                    <div className="lg:w-3/5 relative bg-gray-50 flex flex-col justify-center items-center group overflow-hidden h-64 lg:h-full shrink-0">
+                    {/* Left: Image Section */}
+                    <div className="lg:w-3/5 relative bg-gray-50 flex flex-col justify-center items-center group overflow-hidden h-64 sm:h-80 lg:h-full shrink-0">
                         <div className="relative w-full h-full cursor-zoom-in" onClick={toggleFullscreen}>
                             <img 
                                 src={activeImage} 
@@ -250,53 +280,82 @@ function Achievements() {
                         {/* Navigation */}
                         {hasMultiple && (
                             <>
-                                <button onClick={prevImage} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 transform hover:scale-110">
+                                {/* Mobile Touch Areas */}
+                                <button 
+                                    onClick={prevImage} 
+                                    className="lg:hidden absolute left-0 top-0 bottom-0 w-1/4 z-10 active:bg-black/5"
+                                    aria-label="Previous"
+                                />
+                                <button 
+                                    onClick={nextImage} 
+                                    className="lg:hidden absolute right-0 top-0 bottom-0 w-1/4 z-10 active:bg-black/5"
+                                    aria-label="Next"
+                                />
+                                
+                                {/* Desktop Arrow Buttons */}
+                                <button 
+                                    onClick={prevImage} 
+                                    className="hidden lg:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 transform hover:scale-110 items-center justify-center"
+                                >
                                     <ChevronLeft size={24} />
                                 </button>
-                                <button onClick={nextImage} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 transform hover:scale-110">
+                                <button 
+                                    onClick={nextImage} 
+                                    className="hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100 transform hover:scale-110 items-center justify-center"
+                                >
                                     <ChevronRight size={24} />
                                 </button>
-                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/90 px-4 py-1.5 rounded-full text-xs font-bold text-gray-800 shadow-md">
+                                
+                                {/* Image Counter */}
+                                <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 bg-white/90 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs font-bold text-gray-800 shadow-md">
                                     {currentImageIndex + 1} / {activeItem.images.length}
                                 </div>
                             </>
                         )}
                     </div>
 
-                    {/* Right: Content (Scrollable) */}
-                    <div className="lg:w-2/5 flex flex-col h-full bg-white relative">
-                        {/* 1. Sticky Header */}
-                        <div className="p-8 pb-4 border-b border-gray-100 flex justify-between items-start bg-white shrink-0 z-10">
-                             <div>
-                                <span className="inline-block px-3 py-1 bg-[#008cff]/10 text-[#008cff] rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                    {/* Right: Content Section - ENHANCED FOR MOBILE SCROLL */}
+                    <div className="lg:w-2/5 flex flex-col bg-white relative h-full overflow-hidden">
+                        
+                        {/* Sticky Header */}
+                        <div className="p-4 sm:p-6 lg:p-8 pb-3 sm:pb-4 border-b border-gray-100 flex justify-between items-start bg-white shrink-0 z-10">
+                            <div className="flex-1 pr-2">
+                                <span className="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 bg-[#008cff]/10 text-[#008cff] rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
                                     {activeItem.category}
                                 </span>
-                                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+                                <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 leading-tight">
                                     {activeItem.title}
                                 </h2>
-                             </div>
-                             <button 
+                            </div>
+                            <button 
                                 onClick={closeSpotlight}
-                                className="hidden lg:block p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-gray-900"
+                                className="hidden lg:block p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-400 hover:text-gray-900 flex-shrink-0"
                             >
                                 <X size={24} />
                             </button>
                         </div>
 
-                        {/* 2. Scrollable Body */}
-                        <div className="flex-1 overflow-y-auto p-8 pt-6 custom-scrollbar">
-                            <p className="text-gray-600 text-lg leading-relaxed whitespace-pre-line">
+                        {/* CRITICAL: Scrollable Body with Mobile Fixes */}
+                        <div 
+                            className="mobile-scroll-fix custom-scrollbar flex-1 p-4 sm:p-6 lg:p-8 pt-4 sm:pt-6"
+                            style={{
+                                WebkitOverflowScrolling: 'touch',
+                                touchAction: 'pan-y',
+                                minHeight: 0 // Critical for flex children
+                            }}
+                        >
+                            <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed whitespace-pre-line">
                                 {activeItem.fullDescription || activeItem.description}
                             </p>
 
                             {activeItem.sections && (
-                                <div className="mt-8 space-y-6">
+                                <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
                                     {activeItem.sections.map((section, idx) => (
-                                        <div key={idx} className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-                                            <h4 className="text-lg font-bold text-gray-800 mb-2">
+                                        <div key={idx} className="bg-gray-50 p-4 sm:p-6 rounded-2xl border border-gray-100">
+                                            <h4 className="text-base sm:text-lg font-bold text-gray-800 mb-2">
                                                 {section.heading}
                                             </h4>
-                                            <p className="text-gray-600 text-sm leading-relaxed">
+                                            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                                                 {section.description}
                                             </p>
                                         </div>
@@ -304,21 +363,21 @@ function Achievements() {
                                 </div>
                             )}
                             
-                            {/* Extra padding at bottom to ensure last element is readable */}
-                            <div className="h-8"></div>
+                            {/* Extra padding at bottom */}
+                            <div className="h-6 sm:h-8"></div>
                         </div>
 
-                        {/* 3. Sticky Footer (Thumbnails or Share) */}
-                        <div className="shrink-0 border-t border-gray-100 bg-gray-50/80 backdrop-blur-sm p-4 lg:p-6 z-10">
+                        {/* Sticky Footer */}
+                        <div className="shrink-0 border-t border-gray-100 bg-gray-50/80 backdrop-blur-sm p-3 sm:p-4 lg:p-6 z-10">
                             {hasMultiple ? (
-                                <div className="flex gap-3 overflow-x-auto pb-2 custom-scrollbar">
+                                <div className="flex gap-2 sm:gap-3 overflow-x-auto pb-2 custom-scrollbar">
                                     {activeItem.images.map((img, idx) => (
                                         <button
                                             key={idx}
                                             onClick={() => setCurrentImageIndex(idx)}
-                                            className={`relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 border-2 transition-all ${
+                                            className={`relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl overflow-hidden flex-shrink-0 border-2 transition-all active:scale-95 ${
                                                 currentImageIndex === idx 
-                                                ? 'border-[#008cff] ring-2 ring-[#008cff]/20' 
+                                                ? 'border-[#008cff] ring-2 ring-[#008cff]/20 scale-105' 
                                                 : 'border-transparent opacity-70 hover:opacity-100'
                                             }`}
                                         >
@@ -327,8 +386,8 @@ function Achievements() {
                                     ))}
                                 </div>
                             ) : (
-                                <button className="w-full py-3 bg-[#008cff] text-white rounded-xl font-semibold shadow-lg shadow-blue-500/30 hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
-                                    <Share2 size={18} />
+                                <button className="w-full py-2.5 sm:py-3 bg-[#008cff] text-white rounded-xl font-semibold shadow-lg shadow-blue-500/30 hover:bg-blue-600 active:scale-95 transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                                    <Share2 size={16} className="sm:w-5 sm:h-5" />
                                     Share Achievement
                                 </button>
                             )}
@@ -345,24 +404,30 @@ function Achievements() {
             <div className="fixed inset-0 z-[100] bg-white flex items-center justify-center">
                 <button 
                     onClick={toggleFullscreen}
-                    className="absolute top-6 right-6 bg-gray-100 hover:bg-gray-200 text-gray-900 p-3 rounded-full z-50 transition-colors shadow-md"
+                    className="absolute top-4 sm:top-6 right-4 sm:right-6 bg-gray-100 hover:bg-gray-200 text-gray-900 p-2.5 sm:p-3 rounded-full z-50 transition-colors shadow-md active:scale-95"
                 >
-                    <X size={24} />
+                    <X size={20} className="sm:w-6 sm:h-6" />
                 </button>
                 
                 <img 
                     src={activeItem.images[currentImageIndex]} 
                     alt="Fullscreen"
-                    className="max-w-screen max-h-screen object-contain"
+                    className="max-w-screen max-h-screen object-contain p-4"
                 />
 
                 {activeItem.images.length > 1 && (
                     <>
-                         <button onClick={prevImage} className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 p-4 rounded-full shadow-xl transition-colors">
-                            <ChevronLeft size={32} />
+                        <button 
+                            onClick={prevImage} 
+                            className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 p-3 sm:p-4 rounded-full shadow-xl transition-colors active:scale-95"
+                        >
+                            <ChevronLeft size={24} className="sm:w-8 sm:h-8" />
                         </button>
-                        <button onClick={nextImage} className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 p-4 rounded-full shadow-xl transition-colors">
-                            <ChevronRight size={32} />
+                        <button 
+                            onClick={nextImage} 
+                            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-900 p-3 sm:p-4 rounded-full shadow-xl transition-colors active:scale-95"
+                        >
+                            <ChevronRight size={24} className="sm:w-8 sm:h-8" />
                         </button>
                     </>
                 )}
@@ -391,8 +456,6 @@ function Achievements() {
                     </div>
                 )}
             </div>
-            
-            
         </div>
     );
 }
