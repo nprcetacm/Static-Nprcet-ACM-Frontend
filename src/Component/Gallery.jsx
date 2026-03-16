@@ -98,17 +98,17 @@ const staticGalleryItems = [
     image_url3: mou3,
     image_url4: mou4,
 
-    heading1: "Key Highlights",
+    heading1: "Key Technical Concepts",
     description1:
-      "The session focused on building SDG-focused interactive data visualization dashboards using Grafana. Students were introduced to modern data visualization techniques and learned how dashboards can be used to analyze and represent real-time data effectively.",
+      "The session explained the request–response cycle, forming the basic communication process of web applications. The training also introduced the concept of Search Engine Optimization (SEO) and its importance in improving website visibility and ranking in search engines like Google.",
 
-    heading2: "Objective",
+    heading2: "Data Analytics & BI",
     description2:
-      "The objective of the program was to provide practical exposure to data visualization tools and demonstrate how interactive dashboards can support decision-making and monitoring for Sustainable Development Goals (SDGs).",
+      "The session covered data-driven decision making and Business Intelligence (BI), highlighting how organizations analyze data using dashboards and reports to gain meaningful insights. Students learned to make decisions based on real data rather than assumptions.",
 
-    heading3: "Outcome",
+    heading3: "Tools & Monitoring",
     description3:
-      "Students gained hands-on experience in creating dashboards using Grafana and improved their understanding of real-world data visualization practices, helping them develop skills relevant to industry applications.",
+      "A major focus was on Grafana and Microsoft Power BI for interactive dashboards. The training also introduced monitoring tools such as Prometheus, Promtail, and Grafana Tempo for collecting metrics, managing logs, and tracing application performance.",
   },
   {
     id: 1,

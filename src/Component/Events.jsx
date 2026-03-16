@@ -206,11 +206,10 @@ function Events() {
           {/* Calendar Button */}
           <button
             onClick={() => navigate("/calendar")}
-            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
-              activeView === "calendar"
+            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${activeView === "calendar"
                 ? "bg-gradient-to-r from-sky-600 to-sky-700 shadow-xl shadow-sky-200"
                 : "bg-gradient-to-r from-sky-500 to-sky-600 hover:shadow-lg shadow-sky-100"
-            }`}
+              }`}
           >
             <Calendar className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             Explore Events Calendar
@@ -218,11 +217,10 @@ function Events() {
 
           <button
             onClick={() => navigate("/gallery")}
-            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
-              activeView === "gallery"
+            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${activeView === "gallery"
                 ? "bg-gradient-to-r from-cyan-600 to-cyan-700 shadow-xl shadow-cyan-200"
                 : "bg-gradient-to-r from-cyan-500 to-cyan-600 hover:shadow-lg shadow-cyan-100"
-            }`}
+              }`}
           >
             <Image className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Explore Gallery
@@ -356,7 +354,7 @@ function Events() {
                   </div>
 
                   {/* Action Button */}
-                  <button 
+                  <button
                     onClick={() => setSelectedEvent(event)}
                     className="w-full py-3.5 px-6 rounded-2xl bg-gray-50 text-gray-900 font-bold text-sm border border-gray-100/50 hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_10px_20px_-10px_rgba(2,132,199,0.3)]"
                   >
@@ -431,27 +429,27 @@ function Events() {
 
       {/* Modal for Event Details */}
       {selectedEvent && (
-        <div 
+        <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
           onClick={() => setSelectedEvent(null)}
         >
-          <div 
+          <div
             className="bg-white rounded-3xl max-w-xl w-full max-h-[95vh] overflow-y-auto shadow-2xl relative animate-fade-in-up"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
-            <button 
+            <button
               onClick={() => setSelectedEvent(null)}
               className="absolute top-4 right-4 z-10 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors backdrop-blur-md"
             >
               <X className="w-5 h-5" />
             </button>
-            
+
             {/* Modal Image */}
             <div className="relative w-full bg-slate-900 flex items-center justify-center overflow-hidden rounded-t-[2rem]">
               {selectedEvent.image_url ? (
-                <img 
-                  src={selectedEvent.image_url} 
+                <img
+                  src={selectedEvent.image_url}
                   alt={selectedEvent.title}
                   className="w-full h-full object-cover object-top min-h-[400px] max-h-[70vh]"
                 />
@@ -472,7 +470,7 @@ function Events() {
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                 {selectedEvent.title}
               </h2>
-              
+
               <div className="flex flex-wrap gap-4 mb-6 pb-6 border-b border-gray-100">
                 {selectedEvent.time && (
                   <div className="flex items-center text-sm font-medium text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">
@@ -487,7 +485,7 @@ function Events() {
                   </div>
                 )}
               </div>
-              
+
               <div className="prose prose-sky max-w-none">
                 <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
                   <Users className="w-5 h-5 text-sky-500" />
