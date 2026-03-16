@@ -46,8 +46,41 @@ import talk3 from '../assets/Gallery/Industry_talk_wipro/talk3.jpg'
 
 
 
+import launch1 from '../assets/Gallery/website_launch/1.jpeg'
+import launch2 from '../assets/Gallery/website_launch/2.jpg'
+import launch3 from '../assets/Gallery/website_launch/3.jpeg'
+import launch4 from '../assets/Gallery/website_launch/4.jpeg'
+import launch5 from '../assets/Gallery/website_launch/5.jpeg'
+import launch6 from '../assets/Gallery/website_launch/6.jpeg'
+
+
 // Static gallery data with placeholder images for demonstration
 const staticGalleryItems = [
+  {
+    id: 12,
+    title: "Website Launch – Student Website Service",
+    caption:
+      "Student Website Service developed by the NPRCET ACM Student Chapter was successfully launched on 08 March 2026 as part of the Paperless Education Initiative. The website was inaugurated by P. T. R. Palanivel Thiaga Rajan, Hon’ble Minister for Information Technology, Government of Tamil Nadu, in the presence of the Corporation Commissioner.",
+
+    image_url1: launch1,
+    image_url2: launch2,
+    image_url3: launch3,
+    image_url4: launch4,
+    image_url5: launch5,
+    image_url6: launch6,
+
+    heading1: "Key Highlights",
+    description1:
+      "The platform enables students to access notes, academic resources, and learning materials digitally through a centralized website. The initiative promotes a paperless academic environment, improving accessibility, organization, and efficiency in learning.",
+
+    heading2: "Objective",
+    description2:
+      "The objective of this initiative is to support digital transformation in education by providing students with an easy-to-access online platform for academic resources, while also encouraging sustainable and eco-friendly learning practices.",
+
+    heading3: "Outcome",
+    description3:
+      "The launch marked an important milestone in promoting technology-driven education and digital learning. Students can now access study materials conveniently, supporting the vision of a paperless and digitally empowered academic ecosystem.",
+  },
   {
     id: 1,
     title: "Industry Expert Talk – Cyber Security in Industrial Systems",
@@ -305,7 +338,7 @@ function Gallery() {
   // Utility functions
   const getValidImages = (item) => {
     if (!item) return [];
-    return [item.image_url1, item.image_url2, item.image_url3]
+    return [item.image_url1, item.image_url2, item.image_url3, item.image_url4, item.image_url5, item.image_url6]
       .filter(url => url && url.trim() !== "");
   };
 
