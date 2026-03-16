@@ -53,11 +53,17 @@ import launch4 from '../assets/Gallery/website_launch/4.jpeg'
 import launch5 from '../assets/Gallery/website_launch/5.jpeg'
 import launch6 from '../assets/Gallery/website_launch/6.jpeg'
 
+import mou1 from '../assets/Gallery/It_mou/1_it.jpeg'
+import mou2 from '../assets/Gallery/It_mou/2_it.jpeg'
+import mou3 from '../assets/Gallery/It_mou/3_it.jpeg'
+import mou4 from '../assets/Gallery/It_mou/4_it.jpeg'
+
 
 // Static gallery data with placeholder images for demonstration
 const staticGalleryItems = [
+
   {
-    id: 12,
+    id: 13,
     title: "Website Launch – Student Website Service",
     caption:
       "Student Website Service developed by the NPRCET ACM Student Chapter was successfully launched on 08 March 2026 as part of the Paperless Education Initiative. The website was inaugurated by P. T. R. Palanivel Thiaga Rajan, Hon’ble Minister for Information Technology, Government of Tamil Nadu, in the presence of the Corporation Commissioner.",
@@ -80,6 +86,29 @@ const staticGalleryItems = [
     heading3: "Outcome",
     description3:
       "The launch marked an important milestone in promoting technology-driven education and digital learning. Students can now access study materials conveniently, supporting the vision of a paperless and digitally empowered academic ecosystem.",
+  },
+  {
+    id: 12,
+    title: "MoU Signing Ceremony and Hands-on Training – Building SDG-Focused Interactive Data Visualization Dashboards using Grafana",
+    caption:
+      "MoU Signing Ceremony and Hands-on Training on Building SDG-Focused Interactive Data Visualization Dashboards using Grafana by Mr. S. Mohamed Arsath, Director of Operations – Tarcin Robotics, Madurai. (Date: 02/03/2026 & 03/03/2026)",
+
+    image_url1: mou1,
+    image_url2: mou2,
+    image_url3: mou3,
+    image_url4: mou4,
+
+    heading1: "Key Highlights",
+    description1:
+      "The session focused on building SDG-focused interactive data visualization dashboards using Grafana. Students were introduced to modern data visualization techniques and learned how dashboards can be used to analyze and represent real-time data effectively.",
+
+    heading2: "Objective",
+    description2:
+      "The objective of the program was to provide practical exposure to data visualization tools and demonstrate how interactive dashboards can support decision-making and monitoring for Sustainable Development Goals (SDGs).",
+
+    heading3: "Outcome",
+    description3:
+      "Students gained hands-on experience in creating dashboards using Grafana and improved their understanding of real-world data visualization practices, helping them develop skills relevant to industry applications.",
   },
   {
     id: 1,
@@ -288,7 +317,7 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
   // State for detailed view
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
   const [detailCurrentImageIndex, setDetailCurrentImageIndex] = useState(0);
@@ -353,21 +382,21 @@ function Gallery() {
 
   const handlePrevImage = () => {
     const images = getValidImages(selectedGalleryItem);
-    setDetailCurrentImageIndex(prev => 
+    setDetailCurrentImageIndex(prev =>
       prev === 0 ? images.length - 1 : prev - 1
     );
   };
 
   const handleNextImage = () => {
     const images = getValidImages(selectedGalleryItem);
-    setDetailCurrentImageIndex(prev => 
+    setDetailCurrentImageIndex(prev =>
       prev === images.length - 1 ? 0 : prev + 1
     );
   };
 
   const renderPreviewImage = (item) => {
     const images = getValidImages(item);
-    
+
     if (images.length === 0) {
       return (
         <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
@@ -403,10 +432,10 @@ function Gallery() {
             e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZmlsbD0iIzlmYTZiMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg==';
           }}
         />
-        
+
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         {/* Multiple images indicator */}
         {images.length > 1 && (
           <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium flex items-center space-x-1">
@@ -416,7 +445,7 @@ function Gallery() {
             <span>{images.length}</span>
           </div>
         )}
-        
+
         {/* Click overlay */}
         <button
           onClick={() => handleShowMore(item.id)}
@@ -451,10 +480,10 @@ function Gallery() {
             onClick={handleBackToGallery}
             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mb-8 transition-colors group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-1"
           >
-            <svg 
-              className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
@@ -468,16 +497,16 @@ function Gallery() {
               {images.length > 0 ? (
                 <>
                   {/* Main Image */}
-                  <div className="relative aspect-square bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="relative aspect-video bg-gray-100 rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
                     <img
                       src={images[detailCurrentImageIndex]}
                       alt={`${selectedGalleryItem.title} - Image ${detailCurrentImageIndex + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                       onError={(e) => {
                         e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzlmYTZiMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIE5vdCBGb3VuZDwvdGV4dD48L3N2Zz4=';
                       }}
                     />
-                    
+
                     {/* Image Navigation */}
                     {images.length > 1 && (
                       <>
@@ -499,7 +528,7 @@ function Gallery() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                           </svg>
                         </button>
-                        
+
                         {/* Image Counter */}
                         <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
                           {detailCurrentImageIndex + 1} / {images.length}
@@ -515,11 +544,10 @@ function Gallery() {
                         <button
                           key={index}
                           onClick={() => setDetailCurrentImageIndex(index)}
-                          className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                            detailCurrentImageIndex === index 
-                              ? 'border-blue-600' 
-                              : 'border-gray-200 hover:border-gray-400'
-                          }`}
+                          className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${detailCurrentImageIndex === index
+                            ? 'border-blue-600'
+                            : 'border-gray-200 hover:border-gray-400'
+                            }`}
                         >
                           <img
                             src={image}
@@ -585,7 +613,7 @@ function Gallery() {
               {/* Share Section */}
               <div className="border-t border-gray-200 pt-6">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Share</h3>
-                <button 
+                <button
                   onClick={() => {
                     if (navigator.share) {
                       navigator.share({
@@ -704,7 +732,7 @@ function Gallery() {
                   ) : (
                     <span className="text-gray-400 text-sm">No additional details</span>
                   )}
-                  
+
                   {/* Image count badge */}
                   {getValidImages(item).length > 1 && (
                     <div className="flex items-center text-gray-500 text-sm">
@@ -723,14 +751,14 @@ function Gallery() {
 
       {/* Image Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-4xl max-h-full">
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 md:p-8" onClick={closeImageModal}>
+          <div className="relative max-w-5xl w-full max-h-full flex items-center justify-center" onClick={e => e.stopPropagation()}>
             <img
               src={selectedImage}
               alt="Full size view"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-[90vh] object-contain shadow-2xl rounded-sm"
             />
-            
+
             {/* Close button */}
             <button
               onClick={closeImageModal}
@@ -741,7 +769,7 @@ function Gallery() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            
+
             {/* Navigation buttons */}
             {selectedItem && getValidImages(selectedItem).length > 1 && (
               <>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, X, ChevronDown, Sparkles, ExternalLink, 
-  BookOpen, Cpu, Users, Zap, Award, Globe, Home, Mail 
+import {
+  Menu, X, ChevronDown, Sparkles, ExternalLink,
+  BookOpen, Cpu, Users, Zap, Award, Globe, Home, Mail
 } from 'lucide-react';
 import acmlogo from '../assets/acm_logo1.png';
 import clglogo from '../assets/new_nprcet_logo.png';
@@ -33,15 +33,15 @@ const Navbar = () => {
 
   // Navigation Structure
   const navGroups = [
-    { 
-      name: 'Home', 
-      href: '/', 
+    {
+      name: 'Home',
+      href: '/',
       type: 'link',
       icon: <Home size={18} />
     },
-    { 
-      name: 'Innovation', 
-      type: 'dropdown', 
+    {
+      name: 'Innovation',
+      type: 'dropdown',
       icon: <Cpu size={18} />,
       items: [
         { name: 'AI Hub', href: './ai', description: 'Explore AI technologies' },
@@ -50,9 +50,9 @@ const Navbar = () => {
         { name: 'Initiatives', href: './initiatives', description: 'Our programs' }
       ]
     },
-    { 
-      name: 'Academics', 
-      type: 'dropdown', 
+    {
+      name: 'Academics',
+      type: 'dropdown',
       icon: <BookOpen size={18} />,
       items: [
         { name: 'Careers', href: './career', description: 'Career guidance' },
@@ -60,9 +60,9 @@ const Navbar = () => {
         { name: 'Division', href: 'https://xmind.ai/share/hyjY8MI8?xid=MBUWGjEX', target: '_blank', description: 'Department info' }
       ]
     },
-    { 
-      name: 'Community', 
-      type: 'dropdown', 
+    {
+      name: 'Community',
+      type: 'dropdown',
       icon: <Users size={18} />,
       items: [
         { name: 'Team', href: './team', description: 'Meet our team' },
@@ -71,33 +71,33 @@ const Navbar = () => {
         { name: 'Proud Moments', href: './proudmoments', description: 'Achievements' }
       ]
     },
-    { 
-      name: 'Contact', 
-      href: './contact', 
+    {
+      name: 'Contact',
+      href: './contact',
       type: 'link',
       icon: <Mail size={18} />
     }
   ];
 
   const highlights = [
-    { 
-      name: 'New', 
-      href: './recent-events', 
-      color: 'from-rose-500 to-pink-600', 
+    {
+      name: 'New',
+      href: './recent-events',
+      color: 'from-rose-500 to-pink-600',
       icon: <Sparkles size={14} />,
-      pulse: true 
+      pulse: true
     },
-    { 
-      name: 'Album', 
-      href: 'https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/', 
-      color: 'from-indigo-500 to-purple-600', 
+    {
+      name: 'Album',
+      href: 'https://online.fliphtml5.com/NPRCET_ACM_Student_Chapter/nsbq/',
+      color: 'from-indigo-500 to-purple-600',
       target: '_blank',
       icon: <Award size={14} />
     },
-    { 
-      name: 'News', 
-      href: 'https://online.fliphtml5.com/NPRNEWSLINE/owqn/#p=1', 
-      color: 'from-blue-500 to-cyan-600', 
+    {
+      name: 'News',
+      href: 'https://online.fliphtml5.com/NPRNEWSLINE/owqn/#p=1',
+      color: 'from-blue-500 to-cyan-600',
       target: '_blank',
       icon: <Globe size={14} />
     }
@@ -159,36 +159,35 @@ const Navbar = () => {
         }
       `}</style>
 
-      <nav 
-        className={`fixed w-full z-50 top-0 transition-all duration-500 border-b ${
-          scrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-lg border-gray-200 py-2' 
-            : 'bg-white/80 backdrop-blur-sm border-transparent py-3 sm:py-4'
-        }`}
+      <nav
+        className={`fixed w-full z-50 top-0 transition-all duration-500 border-b ${scrolled
+          ? 'bg-white/95 backdrop-blur-xl shadow-lg border-gray-200 py-2'
+          : 'bg-white/80 backdrop-blur-sm border-transparent py-3 sm:py-4'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
-            
+
             {/* 1. Logos with Animation */}
             <div className="flex-shrink-0 flex items-center gap-2 sm:gap-4">
-              <a 
-                href="https://www.nprcet.org/" 
-                target="_blank" 
-                rel="noreferrer" 
+              <a
+                href="https://nprcolleges.org/engineering/"
+                target="_blank"
+                rel="noreferrer"
                 className="transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-95"
               >
-                <img 
-                  src={clglogo} 
-                  alt="NPRCET" 
-                  className="h-10 sm:h-12 w-auto object-contain drop-shadow-sm" 
+                <img
+                  src={clglogo}
+                  alt="NPRCET"
+                  className="h-10 sm:h-12 w-auto object-contain drop-shadow-sm"
                 />
               </a>
               <div className="h-6 sm:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent hidden sm:block"></div>
               <div className="relative group">
-                <img 
-                  src={acmlogo} 
-                  alt="ACM" 
-                  className="h-8 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-110" 
+                <img
+                  src={acmlogo}
+                  alt="ACM"
+                  className="h-8 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-blue-400 blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
@@ -202,11 +201,10 @@ const Navbar = () => {
                     key={index}
                     href={group.href}
                     onClick={() => setActiveLink(group.href)}
-                    className={`relative px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 group ${
-                      activeLink === group.href 
-                        ? 'text-blue-600 bg-blue-50' 
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'
-                    }`}
+                    className={`relative px-4 py-2 text-sm font-semibold rounded-xl transition-all duration-300 group ${activeLink === group.href
+                      ? 'text-blue-600 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'
+                      }`}
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       <span className="transition-transform duration-300 group-hover:scale-110">
@@ -225,18 +223,18 @@ const Navbar = () => {
                         {group.icon}
                       </span>
                       {group.name}
-                      <ChevronDown 
-                        size={16} 
-                        className="text-gray-400 group-hover:text-blue-600 transition-all duration-300 group-hover/dropdown:rotate-180" 
+                      <ChevronDown
+                        size={16}
+                        className="text-gray-400 group-hover:text-blue-600 transition-all duration-300 group-hover/dropdown:rotate-180"
                       />
                     </button>
-                    
+
                     {/* Enhanced Dropdown Menu */}
                     <div className="absolute left-0 mt-2 w-72 opacity-0 translate-y-2 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:visible transition-all duration-300 ease-out z-50">
                       <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden ring-1 ring-black/5 dropdown-enter">
                         {/* Gradient Header */}
                         <div className="h-1.5 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shimmer-effect"></div>
-                        
+
                         <div className="p-2">
                           {group.items.map((item, subIndex) => (
                             <a
@@ -250,9 +248,9 @@ const Navbar = () => {
                                   <div className="font-semibold text-sm flex items-center gap-2 mb-0.5">
                                     {item.name}
                                     {item.target === '_blank' && (
-                                      <ExternalLink 
-                                        size={12} 
-                                        className="opacity-0 group-hover/item:opacity-60 transition-opacity" 
+                                      <ExternalLink
+                                        size={12}
+                                        className="opacity-0 group-hover/item:opacity-60 transition-opacity"
                                       />
                                     )}
                                   </div>
@@ -260,9 +258,9 @@ const Navbar = () => {
                                     {item.description}
                                   </p>
                                 </div>
-                                <ChevronDown 
-                                  size={14} 
-                                  className="-rotate-90 text-gray-300 group-hover/item:text-blue-500 group-hover/item:translate-x-1 transition-all" 
+                                <ChevronDown
+                                  size={14}
+                                  className="-rotate-90 text-gray-300 group-hover/item:text-blue-500 group-hover/item:translate-x-1 transition-all"
                                 />
                               </div>
                             </a>
@@ -282,9 +280,8 @@ const Navbar = () => {
                   key={i}
                   href={h.href}
                   target={h.target || '_self'}
-                  className={`group relative bg-gradient-to-r ${h.color} text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 overflow-hidden ${
-                    h.pulse ? 'pulse-badge' : ''
-                  }`}
+                  className={`group relative bg-gradient-to-r ${h.color} text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 overflow-hidden ${h.pulse ? 'pulse-badge' : ''
+                    }`}
                 >
                   <div className="absolute inset-0 bg-white/20 shimmer-effect"></div>
                   <span className="relative z-10 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
@@ -301,20 +298,17 @@ const Navbar = () => {
               className="lg:hidden p-2 rounded-xl text-gray-600 hover:bg-gray-100 active:scale-95 transition-all duration-200 focus:outline-none"
             >
               <div className="relative w-6 h-6">
-                <span 
-                  className={`absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300 ${
-                    isMobileMenuOpen ? 'rotate-45 top-2.5' : ''
-                  }`}
+                <span
+                  className={`absolute left-0 top-1 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 top-2.5' : ''
+                    }`}
                 ></span>
-                <span 
-                  className={`absolute left-0 top-2.5 w-6 h-0.5 bg-current transition-all duration-300 ${
-                    isMobileMenuOpen ? 'opacity-0' : ''
-                  }`}
+                <span
+                  className={`absolute left-0 top-2.5 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''
+                    }`}
                 ></span>
-                <span 
-                  className={`absolute left-0 top-4 w-6 h-0.5 bg-current transition-all duration-300 ${
-                    isMobileMenuOpen ? '-rotate-45 top-2.5' : ''
-                  }`}
+                <span
+                  className={`absolute left-0 top-4 w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 top-2.5' : ''
+                    }`}
                 ></span>
               </div>
             </button>
@@ -323,18 +317,16 @@ const Navbar = () => {
       </nav>
 
       {/* 5. Mobile Menu Overlay */}
-      <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-all duration-300 ${
-          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-        }`}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setIsMobileMenuOpen(false)}
       ></div>
 
       {/* 6. Mobile Menu Drawer */}
-      <div 
-        className={`lg:hidden fixed top-0 right-0 z-50 w-[85%] max-w-sm h-full bg-gradient-to-b from-white to-gray-50 shadow-2xl transform transition-all duration-500 ease-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`lg:hidden fixed top-0 right-0 z-50 w-[85%] max-w-sm h-full bg-gradient-to-b from-white to-gray-50 shadow-2xl transform transition-all duration-500 ease-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
@@ -348,7 +340,7 @@ const Navbar = () => {
                 <p className="text-xs text-gray-500">Explore our platform</p>
               </div>
             </div>
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="p-2 rounded-full hover:bg-gray-100 text-gray-500 active:scale-90 transition-all"
             >
@@ -384,11 +376,10 @@ const Navbar = () => {
                     setActiveLink(group.href);
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl font-semibold transition-all active:scale-95 ${
-                    activeLink === group.href
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-100'
-                  }`}
+                  className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl font-semibold transition-all active:scale-95 ${activeLink === group.href
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-100'
+                    }`}
                 >
                   <span className={`${activeLink === group.href ? 'text-white' : 'text-gray-400'}`}>
                     {group.icon}
@@ -405,23 +396,21 @@ const Navbar = () => {
                       <span className="text-gray-400">{group.icon}</span>
                       {group.name}
                     </span>
-                    <ChevronDown 
-                      size={18} 
-                      className={`transition-all duration-300 ${
-                        activeMobileDropdown === index 
-                          ? 'rotate-180 text-blue-600' 
-                          : 'text-gray-400'
-                      }`}
+                    <ChevronDown
+                      size={18}
+                      className={`transition-all duration-300 ${activeMobileDropdown === index
+                        ? 'rotate-180 text-blue-600'
+                        : 'text-gray-400'
+                        }`}
                     />
                   </button>
-                  
+
                   {/* Mobile Submenu */}
-                  <div 
-                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                      activeMobileDropdown === index 
-                        ? 'max-h-96 opacity-100' 
-                        : 'max-h-0 opacity-0'
-                    }`}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${activeMobileDropdown === index
+                      ? 'max-h-96 opacity-100'
+                      : 'max-h-0 opacity-0'
+                      }`}
                   >
                     <div className="px-4 pb-3 pt-1 space-y-1 bg-gray-50">
                       {group.items.map((item, subIndex) => (
@@ -442,9 +431,9 @@ const Navbar = () => {
               )
             ))}
           </div>
-          
+
           {/* Footer */}
-          
+
         </div>
       </div>
     </>

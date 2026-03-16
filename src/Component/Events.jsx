@@ -9,6 +9,7 @@ import {
   ChevronRight,
   Filter,
   Search,
+  X,
 } from "lucide-react";
 import evt1 from "../assets/Events/NPRCET-ACM-pongal.jpg"
 import evt2 from "../assets/Events/ieee-banner.jpg"
@@ -18,11 +19,20 @@ import evt5 from "../assets/Events/aashiq.jpg"
 import evt6 from "../assets/Events/lunar2.jpg"
 import evt7 from "../assets/Events/algoarena.jpg"
 import evt8 from "../assets/Events/Industry_expert_talk.jpeg";
+import evt9 from "../assets/Events/Mou_signing_ceremony_it.jpeg";
 import { useNavigate } from "react-router-dom";
-
 
 // Static array of event objects
 const eventsData = [
+  {
+    id: 9,
+    title: "MoU Signing Ceremony and Hands-on Training – Building SDG-Focused Interactive Data Visualization Dashboards using Grafana",
+    description: "An informative MoU Signing Ceremony and hands-on training session organized by the Department of Information Technology in association with the NPRCET ACM Student Chapter. The session focused on building SDG-focused interactive data visualization dashboards using Grafana and provided students with practical knowledge on modern data visualization tools.\n\nSpeaker: Mr. S. Mohamed Arsath, Director of Operations, Tarcin Robotics, Madurai",
+    date: "2026-03-02",
+    time: "09:15 AM",
+    location: "IT Laboratory – Block III",
+    image_url: evt9,
+  },
   {
     id: 1,
     title:
@@ -109,14 +119,13 @@ const eventsData = [
   },
 ];
 
-
-
 function Events() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [activeView, setActiveView] = useState("calendar");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
   const [selectedYear, setSelectedYear] = useState("all");
+  const [selectedEvent, setSelectedEvent] = useState(null); // Added state for Modal
 
   // Use the static events data
   const events = eventsData;
@@ -173,7 +182,7 @@ function Events() {
   });
 
   return (
-    <div className="min-h-screen mt-20 bg-gradient-to-br from-sky-50 via-white to-cyan-50">
+    <div className="min-h-screen mt-20 bg-gradient-to-br from-sky-50 via-white to-cyan-50 relative">
       {/* Header Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 via-cyan-600 to-sky-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -218,18 +227,6 @@ function Events() {
             <Image className="w-5 h-5 group-hover:scale-110 transition-transform" />
             Explore Gallery
           </button>
-
-          {/* <button
-            onClick={() => handleViewChange("videos")}
-            className={`group px-8 py-4 rounded-2xl font-semibold text-white transition-all duration-300 flex items-center gap-3 transform hover:scale-105 ${
-              activeView === "videos"
-                ? "bg-gradient-to-r from-sky-600 to-cyan-700 shadow-xl shadow-sky-200"
-                : "bg-gradient-to-r from-sky-500 to-cyan-600 hover:shadow-lg shadow-sky-100"
-            }`}
-          >
-            <Video className="w-5 h-5 group-hover:bounce transition-transform" />
-            Explore Videos
-          </button> */}
         </div>
 
         {/* Search and Filter Section */}
@@ -279,19 +276,19 @@ function Events() {
 
         {/* Events Grid */}
         {filteredEvents.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {filteredEvents.map((event, index) => (
               <div
                 key={event.id || index}
-                className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 border border-gray-100"
+                className="group bg-white rounded-[2rem] shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 flex flex-col w-full max-w-[380px] mx-auto"
               >
                 {/* Event Image */}
-                <div className="relative bg-gradient-to-br from-sky-500 via-cyan-500 to-sky-600 overflow-hidden  flex items-center justify-center">
+                <div className="relative aspect-[4/5] bg-gray-50 overflow-hidden flex items-start justify-center">
                   {event.image_url ? (
                     <img
                       src={event.image_url}
                       alt={event.title || "Event"}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                       onError={(e) => {
                         e.target.style.display = "none";
                         e.target.parentNode.classList.add(
@@ -300,9 +297,9 @@ function Events() {
                           "justify-center"
                         );
                         const icon = document.createElement("div");
-                        icon.className = "text-white text-center";
+                        icon.className = "text-gray-400 text-center";
                         icon.innerHTML = `
-          <div class="w-16 h-16 mx-auto mb-2 opacity-60">
+          <div class="w-16 h-16 mx-auto mb-2 opacity-40">
             <svg fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
             </svg>
@@ -313,57 +310,59 @@ function Events() {
                       }}
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-white">
+                    <div className="w-full h-full flex items-center justify-center text-gray-400">
                       <div className="text-center">
-                        <Image className="w-16 h-16 mx-auto mb-2 opacity-60" />
+                        <Image className="w-16 h-16 mx-auto mb-2 opacity-40" />
                         <p className="text-sm font-medium">Event Poster</p>
                       </div>
                     </div>
                   )}
 
                   {/* Date Badge */}
-                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 text-sm font-bold text-gray-800 shadow-lg">
+                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md rounded-xl px-4 py-2 text-xs font-bold text-gray-900 shadow-sm z-10">
                     {formatDate(event.date)}
                   </div>
 
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  {/* Gentle Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 {/* Event Content */}
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-4 leading-tight group-hover:text-sky-600 transition-colors">
+                <div className="p-7 flex flex-col flex-grow bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 leading-tight group-hover:text-sky-600 transition-colors">
                     {event.title || "Untitled Event"}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 line-clamp-2 text-sm leading-relaxed">
+                  <p className="text-gray-500 mb-6 line-clamp-2 text-sm leading-relaxed flex-grow">
                     {event.description ||
                       "No description available for this event."}
                   </p>
 
                   {/* Event Details */}
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-3 mb-8">
                     {event.time && (
-                      <div className="flex items-center text-xs text-gray-500">
-                        <Clock className="w-3 h-3 mr-2 text-sky-500 flex-shrink-0" />
+                      <div className="flex items-center text-sm font-medium text-gray-500">
+                        <Clock className="w-4 h-4 mr-3 text-sky-500 flex-shrink-0" />
                         <span>{formatTime(event.time)}</span>
                       </div>
                     )}
 
                     {event.location && (
-                      <div className="flex items-center text-xs text-gray-500">
-                        <MapPin className="w-3 h-3 mr-2 text-sky-500 flex-shrink-0" />
+                      <div className="flex items-center text-sm font-medium text-gray-500">
+                        <MapPin className="w-4 h-4 mr-3 text-sky-500 flex-shrink-0" />
                         <span className="line-clamp-1">{event.location}</span>
                       </div>
                     )}
                   </div>
 
                   {/* Action Button */}
-                  {/* <button className="w-full bg-gradient-to-r from-sky-500 via-cyan-500 to-sky-500 text-white font-semibold py-3 px-4 rounded-2xl hover:shadow-lg transition-all duration-300 transform group-hover:scale-105 flex items-center justify-center gap-2 group text-sm">
-                    <Users className="w-4 h-4" />
-                    <span>View Details</span>
+                  <button 
+                    onClick={() => setSelectedEvent(event)}
+                    className="w-full py-3.5 px-6 rounded-2xl bg-gray-50 text-gray-900 font-bold text-sm border border-gray-100/50 hover:bg-sky-600 hover:text-white hover:border-sky-600 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-[0_10px_20px_-10px_rgba(2,132,199,0.3)]"
+                  >
+                    <span>Read Details</span>
                     <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button> */}
+                  </button>
                 </div>
               </div>
             ))}
@@ -429,6 +428,80 @@ function Events() {
           </div>
         )}
       </div>
+
+      {/* Modal for Event Details */}
+      {selectedEvent && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
+          onClick={() => setSelectedEvent(null)}
+        >
+          <div 
+            className="bg-white rounded-3xl max-w-xl w-full max-h-[95vh] overflow-y-auto shadow-2xl relative animate-fade-in-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button 
+              onClick={() => setSelectedEvent(null)}
+              className="absolute top-4 right-4 z-10 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition-colors backdrop-blur-md"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            {/* Modal Image */}
+            <div className="relative w-full bg-slate-900 flex items-center justify-center overflow-hidden rounded-t-[2rem]">
+              {selectedEvent.image_url ? (
+                <img 
+                  src={selectedEvent.image_url} 
+                  alt={selectedEvent.title}
+                  className="w-full h-full object-cover object-top min-h-[400px] max-h-[70vh]"
+                />
+              ) : (
+                <div className="w-full h-64 flex flex-col items-center justify-center text-slate-400">
+                  <Image className="w-16 h-16 mb-2 opacity-50" />
+                  <span>No image available</span>
+                </div>
+              )}
+              {/* Date Badge */}
+              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md rounded-xl px-5 py-2.5 text-sm font-bold text-sky-700 shadow-xl border border-white/20">
+                {formatDate(selectedEvent.date)}
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                {selectedEvent.title}
+              </h2>
+              
+              <div className="flex flex-wrap gap-4 mb-6 pb-6 border-b border-gray-100">
+                {selectedEvent.time && (
+                  <div className="flex items-center text-sm font-medium text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">
+                    <Clock className="w-4 h-4 mr-2 text-sky-500" />
+                    {formatTime(selectedEvent.time)}
+                  </div>
+                )}
+                {selectedEvent.location && (
+                  <div className="flex items-center text-sm font-medium text-gray-600 bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-100">
+                    <MapPin className="w-4 h-4 mr-2 text-sky-500" />
+                    {selectedEvent.location}
+                  </div>
+                )}
+              </div>
+              
+              <div className="prose prose-sky max-w-none">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                  <Users className="w-5 h-5 text-sky-500" />
+                  About this Event
+                </h3>
+                <p className="text-gray-600 whitespace-pre-line leading-relaxed text-base">
+                  {selectedEvent.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
